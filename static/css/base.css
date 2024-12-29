@@ -87,8 +87,8 @@ body {
     }
 }
 /* pad the top a bit when navbar is collapsed on mobile */
-@media (max-width: 991px) {
-    .header-container {
-        padding-top: 116px;
+@media (max-width: 768px) {
+    .container {
+        padding-top: 100px;
     }
 }
