@@ -1,3 +1,7 @@
+<!-- All HTML was initially taken from https://github.com/Code-Institute-Solutions/boutique_ado_v1/blob/283ce70483507eda1ae31143c8450b9f52cdb5b1/products/templates/products/products.html-->
+<!-- All commits/changes after this were modified to suit the design of this project*/-->
+
+
 {% extends "base.html" %}
 {% load static %}
 
@@ -28,11 +32,11 @@
                                 <!--card layout from bootstrap-->
                                 <div class="card h-100 border-0">
                                     {% if product.image %}
-                                    <a href="">
+                                    <a href="{% url 'product_detail' product.id %}">
                                         <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                                     </a>
                                     {% else %}
-                                    <a href="">
+                                    <a href="{% url 'product_detail' product.id %}">
                                         <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                                     </a>
                                     {% endif %}
