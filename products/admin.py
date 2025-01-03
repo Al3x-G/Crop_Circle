@@ -1,7 +1,7 @@
 from django.contrib import admin
 from .models import Product, Category
 
-# Register your models here.
+# Registered models for product app here.
 
 
 class ProductAdmin(admin.ModelAdmin):

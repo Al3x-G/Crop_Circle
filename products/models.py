@@ -1,6 +1,6 @@
 from django.db import models
 
-# Create your models for the products app here.
+# Created models for the product app here.
 
 
 class Category(models.Model):

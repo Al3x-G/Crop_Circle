@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-# Create your views here.
+# Created views for home app here.
 
 
 def index(request):
