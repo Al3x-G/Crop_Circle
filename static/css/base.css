@@ -63,6 +63,18 @@ body {
     background: #000 !important;
 }
 
+/* overlay used in all templates to cover background image, index-1 ensuring its sits behind content */
+.overlay {
+    height:100%;
+    width:100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color: white;
+    z-index: -1;
+}
+
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
