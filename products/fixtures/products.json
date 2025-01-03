@@ -1,1 +1,562 @@
-[{"pk":1,"model":"products.product","fields":{"sku":"sscau085","name":"Cauliflower","description":"Our fresh, organic cauliflower is a versatile and nutritious addition to your kitchen. Each head is carefully selected for its creamy white florets, vibrant green leaves, and crisp texture, ensuring you receive the highest quality produce.","price":0.85,"category":1,"rating":4.7,"image_url":"media/cauliflower.jpg","image":"cauliflower.jpg"}},{"pk":2,"model":"products.product","fields":{"sku":"sslee250","name":"Leeks","description":"Bring the taste of freshness to your kitchen with our handpicked organic leeks. Known for their subtle onion-like flavor and versatility, leeks are a must-have ingredient for soups, stews, salads, and more.","price":2.5,"category":1,"rating":4.7,"image_url":"media/leeks.jpg","image":"leeks.jpg"}},{"pk":3,"model":"products.product","fields":{"sku":"ssasp720","name":"Asparagus","description":"Add a touch of elegance and nutrition to your meals with our Fresh Asparagus Spears! Perfectly handpicked to ensure premium quality, our asparagus is tender, crisp, and packed with flavor.","price":7.2,"category":1,"rating":4.8,"image_url":"media/asparagus.jpg","image":"asparagus.jpg"}},{"pk":4,"model":"products.product","fields":{"sku":"sssproni620","name":"Spring Onion","description":"Our fresh spring onions, also known as scallions, are the perfect blend of mild onion flavor and crisp texture. These versatile vegetables feature slender white bulbs and lush green tops, offering a fresh, slightly sweet taste.","price":6.2,"category":1,"rating":4,"image_url":"media/spring_onion.jpg","image":"spring_onion.jpg"}},{"pk":5,"model":"products.product","fields":{"sku":"sslet080","name":"Lettuce","description":"Add a burst of freshness to your meals with our Fresh Green Leaf Lettuce! Grown with care, this lettuce features vibrant green leaves with a natural, crisp texture and a slightly sweet, refreshing flavor. Perfect for salads, sandwiches, wraps, or as a healthy garnish.","price":0.8,"category":1,"rating":5,"image_url":"media/lettuce.jpg","image":"lettuce.jpg"}},{"pk":6,"model":"products.product","fields":{"sku":"ssrhu200","name":"Rhubarb","description":"Add a burst of tangy flavor to your kitchen with our fresh rhubarb stalks! These vibrant, ruby-red stalks are perfect for baking, cooking, or crafting homemade preserves. With their distinct tartness, rhubarb is an essential ingredient for classic pies, crisps, and jams.","price":2,"category":1,"rating":4.8,"image_url":"media/rhubarb.jpg","image":"rhubarb.jpg"}},{"pk":7,"model":"products.product","fields":{"sku":"ssspi300","name":"Spinach","description":"Enjoy the wholesome goodness of our Fresh Organic Spinach! Packed with nutrients and flavor, this leafy green is an essential addition to your healthy lifestyle. Carefully cultivated on certified organic farms, it’s free from harmful chemicals, ensuring you get only the best.","price":3,"category":1,"rating":4.5,"image_url":"media/spinach.jpg","image":"spinach.jpg"}},{"pk":8,"model":"products.product","fields":{"sku":"ssroc1125","name":"Rocket","description":"Add a burst of flavor to your meals with our fresh Rocket Vegetable (Arugula)! Known for its peppery, bold taste, Rocket is a versatile green that enhances salads, sandwiches, pasta, and even pizza.","price":11.25,"category":1,"rating":4.6,"image_url":"media/rocket.jpg","image":"rocket.jpg"}},{"pk":9,"model":"products.product","fields":{"sku":"sstom215","name":"Tomatoes","description":"Indulge in the vibrant taste of nature with our Fresh, Juicy Tomatoes. Sourced directly from local farms, these ripe tomatoes are bursting with flavor, perfect for enhancing any meal. Whether you're making a fresh salad, preparing a savory sauce, or enjoying a simple slice, these tomatoes offer a sweet, tangy taste and smooth texture that will elevate your cooking.","price":2.15,"category":1,"rating":4.8,"image_url":"media/tomatoes.jpg","image":"tomatoes.jpg"}},{"pk":10,"model":"products.product","fields":{"sku":"ssnewpot200","name":"New Potatoes","description":"Discover the delicious taste of freshly harvested new potatoes, perfect for a variety of dishes. These tender, small potatoes are known for their smooth skin and delicate, buttery flavor. Harvested early in the season, they retain their natural sweetness and firm texture, making them ideal for roasting, boiling, or steaming. ","price":2,"category":1,"rating":4.5,"image_url":"media/new_potatoes.jpg","image":"new_potatoes.jpg"}},{"pk":11,"model":"products.product","fields":{"sku":"ssswe200","name":"Sweetcorn","description":"Discover the pure taste of summer with our premium sweetcorn. Each cob is carefully handpicked at peak ripeness to ensure maximum flavor and tenderness. Bursting with natural sweetness, our sweetcorn is perfect for grilling, boiling, or adding to your favorite salads and side dishes.","price":2,"category":1,"rating":4,"image_url":"media/sweetcorn.jpg","image":"sweetcorn.jpg"}},{"pk":12,"model":"products.product","fields":{"sku":"sspea125","name":"Peas","description":"Discover the natural goodness of our premium fresh peas, handpicked for their crisp texture and vibrant green color. Perfectly packed with essential vitamins, fiber, and antioxidants, these peas offer a delicious, nutrient-dense addition to your daily diet.","price":1.25,"category":1,"rating":4.7,"image_url":"media/peas.jpg","image":"peas.jpg"}},{"pk":13,"model":"products.product","fields":{"sku":"awapp380","name":"Apples","description":"Discover the natural sweetness and crispness of our premium apples, handpicked at the peak of freshness. Perfect for snacking, baking, or adding a touch of flavor to your favorite dishes, these apples are as versatile as they are delicious.","price":3.8,"category":2,"rating":4.2,"image_url":"media/apples.jpg","image":"apples.jpg"}},{"pk":14,"model":"products.product","fields":{"sku":"awbee100","name":"Beetroot","description":"Add vibrant color and rich nutrition to your meals with our Fresh Beetroot! Known for its deep, earthy flavor and striking ruby-red hue, beetroot is a must-have for health-conscious individuals. Packed with essential nutrients like fiber, folate, potassium, and antioxidants, it supports heart health, boosts stamina, and promotes digestion.","price":1,"category":2,"rating":4.8,"image_url":"media/beetroot.jpg","image":"beetroot.jpg"}},{"pk":15,"model":"products.product","fields":{"sku":"awcel250","name":"Celery","description":"Our premium celery is the perfect addition to your kitchen, offering a refreshing crunch and vibrant flavor. Whether you’re making salads, soups, or snacks, this fresh celery provides a burst of natural goodness. Each stalk is packed with vitamins, minerals, and fiber, making it an excellent choice for healthy living.","price":2.5,"category":2,"rating":4.9,"image_url":"media/celery.jpg","image":"celery.jpg"}},{"pk":16,"model":"products.product","fields":{"sku":"awpum250","name":"Pumpkins","description":"Add the perfect touch to your home, garden, or kitchen with our high-quality pumpkins. Whether you're looking to decorate for autumn, create a delicious pumpkin pie, or plant a fresh batch for the next season, our pumpkins are sure to meet your needs.","price":2.5,"category":2,"rating":4.5,"image_url":"media/pumpkin.jpg","image":"pumpkin.jpg"}},{"pk":17,"model":"products.product","fields":{"sku":"awpar100","name":"Parsnips","description":"Our premium, fresh parsnips are a root vegetable that combines a natural sweetness with a slightly nutty flavor, making them a perfect addition to any dish. With their creamy white color and smooth texture, these parsnips are ideal for roasting, mashing, or adding to soups and stews. Packed with vitamins, minerals, and fiber, they’re not only delicious but also a healthy choice for any meal.","price":1,"category":2,"rating":4.5,"image_url":"media/parsnips.jpg","image":"parsnips.jpg"}},{"pk":18,"model":"products.product","fields":{"sku":"awpot080","name":"Potato","description":"Our premium-grade potatoes are carefully sourced from trusted local farms, ensuring you receive only the finest produce available. Whether you're preparing mashed potatoes, crispy fries, a comforting potato salad, or a savory casserole, these versatile tubers are an essential staple for your kitchen.","price":0.8,"category":2,"rating":4.9,"image_url":"media/potato.jpg","image":"potato.jpg"}},{"pk":19,"model":"products.product","fields":{"sku":"awbruspr100","name":"Brussel Sprouts","description":"Our Brussels sprouts are the perfect addition to your meals, offering a healthy and tasty option for any dish. Grown fresh and handpicked, these small, vibrant green vegetables are packed with essential nutrients, including fiber, vitamins C and K, and antioxidants. Whether roasted, steamed, or sautéed, Brussels sprouts add a delightful, slightly sweet, and savory flavor that complements any cuisine.","price":1,"category":2,"rating":5,"image_url":"media/brussel_sprouts.jpg","image":"brussel_sprouts.jpg"}},{"pk":20,"model":"products.product","fields":{"sku":"awcar035","name":"Carrots","description":"These vibrant orange roots are not only delicious but also a powerhouse of nutrients, promoting better vision, glowing skin, and overall wellness. Whether you’re whipping up a hearty stew, blending a nutritious juice, or munching on a raw snack, our carrots are carefully selected to bring you the best quality.","price":0.35,"category":2,"rating":4.8,"image_url":"media/carrots.jpg","image":"carrots.jpg"}},{"pk":21,"model":"products.product","fields":{"sku":"awcab050","name":"Cabbage","description":"Crisp, nutritious, and versatile, our fresh green cabbage is a must-have for any kitchen. Packed with vitamins C and K, it’s a healthy addition to salads, stir-fries, soups, and more. Grown naturally and hand-picked at peak freshness, this cabbage is firm, with tightly packed leaves and a vibrant green color that promises exceptional quality.","price":0.5,"category":2,"rating":4.4,"image_url":"media/cabbage.jpg","image":"cabbage.jpg"}},{"pk":22,"model":"products.product","fields":{"sku":"awswe110","name":"Swedes","description":"Discover the natural sweetness of fresh swede, also known as rutabaga! Perfect for hearty soups, stews, mashes, or roasted dishes, this nutrient-rich root vegetable adds a touch of earthiness and vibrant flavor to your meals.","price":1.1,"category":2,"rating":5,"image_url":"media/swede.jpg","image":"swede.jpg"}},{"pk":23,"model":"products.product","fields":{"sku":"awbro135","name":"Broccoli","description":"Experience the crisp, vibrant flavor of our Fresh Broccoli Florets, a versatile and nutrient-packed vegetable that’s a staple for healthy eating. Whether you’re cooking a gourmet meal or preparing a quick snack, this premium broccoli delivers unmatched freshness and quality.","price":1.35,"category":2,"rating":4.9,"image_url":"media/broccoli.jpg","image":"broccoli.jpg"}},{"pk":24,"model":"products.product","fields":{"sku":"awkal600","name":"Kale","description":"Add a burst of health to your meals with our fresh organic kale. This leafy green superfood is packed with essential nutrients, including vitamins A, C, and K, fiber, and antioxidants. Perfect for smoothies, salads, soups, and sautéed dishes, kale brings a rich, slightly earthy flavor to your table. Grown without harmful chemicals, our kale is crisp, tender, and harvested at peak freshness for maximum flavor and nutrition.","price":6,"category":2,"rating":4.8,"image_url":"media/kale.jpg","image":"kale.jpg"}},{"pk":25,"model":"products.product","fields":{"sku":"precarjam250","name":"Carrot Jam","description":"Experience the wholesome goodness of our Carrot Jam, made from fresh, handpicked carrots and a blend of natural sweeteners. This unique spread combines the earthy sweetness of carrots with a hint of citrus or spice for a taste that is both comforting and adventurous.","price":2.5,"category":3,"rating":4,"image_url":"media/carrot_jam.jpg","image":"carrot_jam.jpg"}},{"pk":26,"model":"products.product","fields":{"sku":"prerhujam250","name":"Rhubarb Jam","description":"Discover the tangy sweetness of our handcrafted Rhubarb Jam! Made with ripe, garden-fresh rhubarb, this jam strikes the perfect balance between tart and sweet, delivering a flavor that’s delightfully bold and refreshingly unique. Perfect for spreading on toast, pairing with cheeses, or adding a zesty twist to your favorite desserts, our Rhubarb Jam is a versatile treat that transforms everyday meals into something special.","price":2.5,"category":3,"rating":4.5,"image_url":"media/rubarb_jam.jpg","image":"rubarb_jam.jpg"}},{"pk":27,"model":"products.product","fields":{"sku":"pretomchu250","name":"Tomato Chutney","description":"A tangy and flavorful condiment that brings a burst of zest to your meals. Made from ripe, juicy tomatoes, expertly blended with aromatic spices and a hint of sweetness, our tomato chutney is the perfect companion to Indian breads, snacks, and even your favorite Western dishes. Whether you're looking to enhance a simple meal or add depth to a gourmet spread, this versatile chutney is a must-have in your kitchen. Naturally made, free from artificial preservatives, and packed with authentic taste in every spoonful.","price":2.5,"category":3,"rating":5,"image_url":"media/tomato_chutney.jpg","image":"tomato_chutney.jpg"}},{"pk":28,"model":"products.product","fields":{"sku":"prepicbee250","name":"Pickled Beetroot","description":"Indulge in the rich taste of our pickled beetroot, crafted from farm-fresh beets harvested at peak ripeness. Each slice is infused with a delicate balance of vinegar, spices, and just a touch of sweetness to bring out the beetroot's natural earthy goodness.","price":2.5,"category":3,"rating":4.4,"image_url":"media/pickled_beetroot.jpg","image":"pickled_beetroot.jpg"}},{"pk":29,"model":"products.product","fields":{"sku":"prespipumbut250","name":"Spiced Pumpkin Butter","description":"Indulge in the warm, comforting flavors of autumn with our Spiced Pumpkin Butter. This rich, velvety spread blends the sweetness of pure pumpkin with a carefully crafted mix of cinnamon, nutmeg, and allspice, creating the perfect balance of spice and sweetness. Whether slathered on toast, paired with pancakes, or stirred into oatmeal, this pumpkin butter is a versatile addition to your fall favorites. Made with high-quality ingredients, it’s a delightful way to bring the essence of the season into your kitchen year-round.","price":2.5,"category":3,"rating":4.7,"image_url":"media/spiced_pumpkin_butter.jpg","image":"spiced_pumpkin_butter.jpg"}},{"pk":30,"model":"products.product","fields":{"sku":"prekalchi100","name":"Kale Chips","description":"Snack smarter with our Kale Chips, a nutritious and guilt-free alternative to traditional chips. Made from premium, handpicked kale leaves, these chips are roasted to perfection, preserving their vibrant color and satisfying crunch. Whether you're looking for a low-calorie snack or a healthy addition to your meal, these kale chips are packed with essential vitamins, fiber, and antioxidants to keep you feeling energized. Priced at £1.00 per 100g","price":1,"category":3,"rating":5,"image_url":"media/kale_chips.jpg","image":"kale_chips.jpg"}},{"pk":31,"model":"products.product","fields":{"sku":"aggkseekit250","name":"Seed Kits","description":"Transform your home into a vibrant garden with our Home Gardening Seed Kit. Whether you're new to gardening or a green-thumbed enthusiast, this kit makes growing your own vegetables, fruits, herbs, microgreens a breeze. Perfect for small spaces, apartments, or balconies, it includes everything you need to get started and enjoy the satisfaction of nurturing your own plants.","price":2.5,"category":4,"rating":5,"image_url":"media/seed_kits.jpg","image":"seed_kits.jpg"}},{"pk":32,"model":"products.product","fields":{"sku":"aggkplabedkit500","name":"Plant Bed Kit","description":"Transform your outdoor space into a thriving garden with the Premium Plant Bed Kit. This all-in-one solution is perfect for both beginner and experienced gardeners looking to grow vegetables, herbs, flowers, or ornamental plants. Whether you have limited space or want to organize your garden, our easy-to-assemble raised garden bed provides the ideal environment for your plants to flourish.","price":5,"category":4,"rating":4.9,"image_url":"media/plant_bed_kit.jpg","image":"plant_bed_kit.jpg"}},{"pk":33,"model":"products.product","fields":{"sku":"aggksoienhfer2000","name":"Soil enhancers and fertilizers","description":"Unlock the full potential of your garden with our Soil Enhancers and Fertilizers Kit. Whether you're a beginner or a seasoned gardener, this all-in-one kit is designed to improve soil quality, enhance plant growth, and deliver vibrant, healthy plants year-round.","price":20,"category":4,"rating":4.6,"image_url":"media/soil_enhancers.jpg","image":"soil_enhancers.jpg"}},{"pk":34,"model":"products.product","fields":{"sku":"aggkgartoo2500","name":"Gardening Tools","description":"Transform your gardening experience with our premium Gardening Tools Kit—the perfect set for beginners and seasoned gardeners alike! Whether you’re planting, pruning, weeding, or digging, this versatile kit provides everything you need to tend to your garden with ease and precision.","price":25,"category":4,"rating":4.6,"image_url":"media/garden_tools.jpg","image":"garden_tools.jpg"}},{"pk":35,"model":"products.product","fields":{"sku":"aghkharbasapr500","name":"Harvesting Basket and Aprons","description":"Maximize your harvests with the ultimate combo of practicality and comfort! Our Harvesting Basket and Aprons Set is designed to make collecting your fruits, vegetables, and flowers easier than ever. Whether you're a home gardener or a professional farmer, this set has everything you need for efficient harvesting.","price":5,"category":5,"rating":4.8,"image_url":"media/harvest_basket_apron.jpg","image":"harvest_basket_apron.jpg"}},{"pk":36,"model":"products.product","fields":{"sku":"akhkfooprekit1500","name":"Food Preserve Kit","description":"Perfect for home cooks, gardeners, and food enthusiasts, this comprehensive kit is designed to help you preserve food naturally, keeping it fresh for days or even weeks longer than traditional storage methods. This all-in-one preservation kit includes everything you need to extend the freshness of your food without relying on harmful chemicals or artificial preservatives. Whether you're storing fresh produce, prepping meals in advance, or freezing leftovers, this kit has got you covered. ","price":15,"category":5,"rating":4.7,"image_url":"media/food_preserve_kit.jpg","image":"food_preserve_kit.jpg"}},{"pk":37,"model":"products.product","fields":{"sku":"aghkfoorac500","name":"Food Rack","description":"Organize your kitchen effortlessly with our Multi-Tier Food Storage Rack. Designed to maximize storage space while keeping your food neatly arranged, this versatile rack is perfect for any modern kitchen. Whether you need a place for canned goods, spices, dry snacks, or even fresh fruits and vegetables, this rack provides an efficient, accessible solution.","price":5,"category":5,"rating":4.5,"image_url":"media/food_rack.jpg","image":"food_rack.jpg"}},{"pk":38,"model":"products.product","fields":{"sku":"aggthyd7500","name":"Hydroponic Kit","description":"Transform your home into a thriving garden with our Hydroponic Gardening Kit! Whether you're a beginner or an experienced gardener, this all-in-one kit offers everything you need to grow a variety of plants without soil. Hydroponic gardening is the future of sustainable farming, offering faster growth, cleaner environments, and healthier produce.","price":75,"category":6,"rating":4.6,"image_url":"media/hydroponic.jpg","image":"hydroponic.jpg"}},{"pk":39,"model":"products.product","fields":{"sku":"aggtgrolig5000","name":"Grow Lights Kit","description":"Unlock the potential of indoor gardening with our Grow Lights Kit, designed to provide your plants with the perfect environment for optimal growth, no matter the season. Ideal for herbs, flowers, vegetables, succulents, and more, this all-in-one kit delivers essential light spectrum for plants to thrive indoors.","price":50,"category":6,"rating":3.9,"image_url":"media/growlights.jpg","image":"growlights.jpg"}},{"pk":40,"model":"products.product","fields":{"sku":"aggtsmasen3500","name":"Smart Sensors Kit (moisture, pH, temperature)","description":"Take control of your garden or indoor plant environment with the Smart Sensors Kit, designed to provide precise, real-time readings for moisture, pH, and temperature. Whether you're a gardening pro or just getting started, this easy-to-use kit ensures your plants are always thriving in the optimal conditions.","price":35,"category":6,"rating":5,"image_url":"media/smart_sensor.jpg","image":"smart_sensor.jpg"}}]
+[
+    {
+      "pk": 1,
+      "model": "products.product",
+      "fields": {
+        "sku": "sscau085",
+        "name": "Cauliflower",
+        "description": "Our fresh, organic cauliflower is a versatile and nutritious addition to your kitchen. Each head is carefully selected for its creamy white florets, vibrant green leaves, and crisp texture, ensuring you receive the highest quality produce.",
+        "price": 0.85,
+        "category": 1,
+        "rating": 4.7,
+        "image_url": "media/cauliflower.jpg",
+        "image": "cauliflower.jpg"
+      }
+    },
+    {
+      "pk": 2,
+      "model": "products.product",
+      "fields": {
+        "sku": "sslee250",
+        "name": "Leeks",
+        "description": "Bring the taste of freshness to your kitchen with our handpicked organic leeks. Known for their subtle onion-like flavor and versatility, leeks are a must-have ingredient for soups, stews, salads, and more.",
+        "price": 2.5,
+        "category": 1,
+        "rating": 4.7,
+        "image_url": "media/leeks.jpg",
+        "image": "leeks.jpg"
+      }
+    },
+    {
+      "pk": 3,
+      "model": "products.product",
+      "fields": {
+        "sku": "ssasp720",
+        "name": "Asparagus",
+        "description": "Add a touch of elegance and nutrition to your meals with our Fresh Asparagus Spears! Perfectly handpicked to ensure premium quality, our asparagus is tender, crisp, and packed with flavor.",
+        "price": 7.2,
+        "category": 1,
+        "rating": 4.8,
+        "image_url": "media/asparagus.jpg",
+        "image": "asparagus.jpg"
+      }
+    },
+    {
+      "pk": 4,
+      "model": "products.product",
+      "fields": {
+        "sku": "sssproni620",
+        "name": "Spring Onion",
+        "description": "Our fresh spring onions, also known as scallions, are the perfect blend of mild onion flavor and crisp texture. These versatile vegetables feature slender white bulbs and lush green tops, offering a fresh, slightly sweet taste.",
+        "price": 6.2,
+        "category": 1,
+        "rating": 4,
+        "image_url": "media/spring_onion.jpg",
+        "image": "spring_onion.jpg"
+      }
+    },
+    {
+      "pk": 5,
+      "model": "products.product",
+      "fields": {
+        "sku": "sslet080",
+        "name": "Lettuce",
+        "description": "Add a burst of freshness to your meals with our Fresh Green Leaf Lettuce! Grown with care, this lettuce features vibrant green leaves with a natural, crisp texture and a slightly sweet, refreshing flavor. Perfect for salads, sandwiches, wraps, or as a healthy garnish.",
+        "price": 0.8,
+        "category": 1,
+        "rating": 5,
+        "image_url": "media/lettuce.jpg",
+        "image": "lettuce.jpg"
+      }
+    },
+    {
+      "pk": 6,
+      "model": "products.product",
+      "fields": {
+        "sku": "ssrhu200",
+        "name": "Rhubarb",
+        "description": "Add a burst of tangy flavor to your kitchen with our fresh rhubarb stalks! These vibrant, ruby-red stalks are perfect for baking, cooking, or crafting homemade preserves. With their distinct tartness, rhubarb is an essential ingredient for classic pies, crisps, and jams.",
+        "price": 2,
+        "category": 1,
+        "rating": 4.8,
+        "image_url": "media/rhubarb.jpg",
+        "image": "rhubarb.jpg"
+      }
+    },
+    {
+      "pk": 7,
+      "model": "products.product",
+      "fields": {
+        "sku": "ssspi300",
+        "name": "Spinach",
+        "description": "Enjoy the wholesome goodness of our Fresh Organic Spinach! Packed with nutrients and flavor, this leafy green is an essential addition to your healthy lifestyle. Carefully cultivated on certified organic farms, it’s free from harmful chemicals, ensuring you get only the best.",
+        "price": 3,
+        "category": 1,
+        "rating": 4.5,
+        "image_url": "media/spinach.jpg",
+        "image": "spinach.jpg"
+      }
+    },
+    {
+      "pk": 8,
+      "model": "products.product",
+      "fields": {
+        "sku": "ssroc1125",
+        "name": "Rocket",
+        "description": "Add a burst of flavor to your meals with our fresh Rocket Vegetable (Arugula)! Known for its peppery, bold taste, Rocket is a versatile green that enhances salads, sandwiches, pasta, and even pizza.",
+        "price": 11.25,
+        "category": 1,
+        "rating": 4.6,
+        "image_url": "media/rocket.jpg",
+        "image": "rocket.jpg"
+      }
+    },
+    {
+      "pk": 9,
+      "model": "products.product",
+      "fields": {
+        "sku": "sstom215",
+        "name": "Tomatoes",
+        "description": "Indulge in the vibrant taste of nature with our Fresh, Juicy Tomatoes. Sourced directly from local farms, these ripe tomatoes are bursting with flavor, perfect for enhancing any meal. Whether you're making a fresh salad, preparing a savory sauce, or enjoying a simple slice, these tomatoes offer a sweet, tangy taste and smooth texture that will elevate your cooking.",
+        "price": 2.15,
+        "category": 1,
+        "rating": 4.8,
+        "image_url": "media/tomatoes.jpg",
+        "image": "tomatoes.jpg"
+      }
+    },
+    {
+      "pk": 10,
+      "model": "products.product",
+      "fields": {
+        "sku": "ssnewpot200",
+        "name": "New Potatoes",
+        "description": "Discover the delicious taste of freshly harvested new potatoes, perfect for a variety of dishes. These tender, small potatoes are known for their smooth skin and delicate, buttery flavor. Harvested early in the season, they retain their natural sweetness and firm texture, making them ideal for roasting, boiling, or steaming. ",
+        "price": 2,
+        "category": 1,
+        "rating": 4.5,
+        "image_url": "media/new_potatoes.jpg",
+        "image": "new_potatoes.jpg"
+      }
+    },
+    {
+      "pk": 11,
+      "model": "products.product",
+      "fields": {
+        "sku": "ssswe200",
+        "name": "Sweetcorn",
+        "description": "Discover the pure taste of summer with our premium sweetcorn. Each cob is carefully handpicked at peak ripeness to ensure maximum flavor and tenderness. Bursting with natural sweetness, our sweetcorn is perfect for grilling, boiling, or adding to your favorite salads and side dishes.",
+        "price": 2,
+        "category": 1,
+        "rating": 4,
+        "image_url": "media/sweetcorn.jpg",
+        "image": "sweetcorn.jpg"
+      }
+    },
+    {
+      "pk": 12,
+      "model": "products.product",
+      "fields": {
+        "sku": "sspea125",
+        "name": "Peas",
+        "description": "Discover the natural goodness of our premium fresh peas, handpicked for their crisp texture and vibrant green color. Perfectly packed with essential vitamins, fiber, and antioxidants, these peas offer a delicious, nutrient-dense addition to your daily diet.",
+        "price": 1.25,
+        "category": 1,
+        "rating": 4.7,
+        "image_url": "media/peas.jpg",
+        "image": "peas.jpg"
+      }
+    },
+    {
+      "pk": 13,
+      "model": "products.product",
+      "fields": {
+        "sku": "awapp380",
+        "name": "Apples",
+        "description": "Discover the natural sweetness and crispness of our premium apples, handpicked at the peak of freshness. Perfect for snacking, baking, or adding a touch of flavor to your favorite dishes, these apples are as versatile as they are delicious.",
+        "price": 3.8,
+        "category": 2,
+        "rating": 4.2,
+        "image_url": "media/apples.jpg",
+        "image": "apples.jpg"
+      }
+    },
+    {
+      "pk": 14,
+      "model": "products.product",
+      "fields": {
+        "sku": "awbee100",
+        "name": "Beetroot",
+        "description": "Add vibrant color and rich nutrition to your meals with our Fresh Beetroot! Known for its deep, earthy flavor and striking ruby-red hue, beetroot is a must-have for health-conscious individuals. Packed with essential nutrients like fiber, folate, potassium, and antioxidants, it supports heart health, boosts stamina, and promotes digestion.",
+        "price": 1,
+        "category": 2,
+        "rating": 4.8,
+        "image_url": "media/beetroot.jpg",
+        "image": "beetroot.jpg"
+      }
+    },
+    {
+      "pk": 15,
+      "model": "products.product",
+      "fields": {
+        "sku": "awcel250",
+        "name": "Celery",
+        "description": "Our premium celery is the perfect addition to your kitchen, offering a refreshing crunch and vibrant flavor. Whether you’re making salads, soups, or snacks, this fresh celery provides a burst of natural goodness. Each stalk is packed with vitamins, minerals, and fiber, making it an excellent choice for healthy living.",
+        "price": 2.5,
+        "category": 2,
+        "rating": 4.9,
+        "image_url": "media/celery.jpg",
+        "image": "celery.jpg"
+      }
+    },
+    {
+      "pk": 16,
+      "model": "products.product",
+      "fields": {
+        "sku": "awpum250",
+        "name": "Pumpkins",
+        "description": "Add the perfect touch to your home, garden, or kitchen with our high-quality pumpkins. Whether you're looking to decorate for autumn, create a delicious pumpkin pie, or plant a fresh batch for the next season, our pumpkins are sure to meet your needs.",
+        "price": 2.5,
+        "category": 2,
+        "rating": 4.5,
+        "image_url": "media/pumpkin.jpg",
+        "image": "pumpkin.jpg"
+      }
+    },
+    {
+      "pk": 17,
+      "model": "products.product",
+      "fields": {
+        "sku": "awpar100",
+        "name": "Parsnips",
+        "description": "Our premium, fresh parsnips are a root vegetable that combines a natural sweetness with a slightly nutty flavor, making them a perfect addition to any dish. With their creamy white color and smooth texture, these parsnips are ideal for roasting, mashing, or adding to soups and stews. Packed with vitamins, minerals, and fiber, they’re not only delicious but also a healthy choice for any meal.",
+        "price": 1,
+        "category": 2,
+        "rating": 4.5,
+        "image_url": "media/parsnips.jpg",
+        "image": "parsnips.jpg"
+      }
+    },
+    {
+      "pk": 18,
+      "model": "products.product",
+      "fields": {
+        "sku": "awpot080",
+        "name": "Potato",
+        "description": "Our premium-grade potatoes are carefully sourced from trusted local farms, ensuring you receive only the finest produce available. Whether you're preparing mashed potatoes, crispy fries, a comforting potato salad, or a savory casserole, these versatile tubers are an essential staple for your kitchen.",
+        "price": 0.8,
+        "category": 2,
+        "rating": 4.9,
+        "image_url": "media/potato.jpg",
+        "image": "potato.jpg"
+      }
+    },
+    {
+      "pk": 19,
+      "model": "products.product",
+      "fields": {
+        "sku": "awbruspr100",
+        "name": "Brussel Sprouts",
+        "description": "Our Brussels sprouts are the perfect addition to your meals, offering a healthy and tasty option for any dish. Grown fresh and handpicked, these small, vibrant green vegetables are packed with essential nutrients, including fiber, vitamins C and K, and antioxidants. Whether roasted, steamed, or sautéed, Brussels sprouts add a delightful, slightly sweet, and savory flavor that complements any cuisine.",
+        "price": 1,
+        "category": 2,
+        "rating": 5,
+        "image_url": "media/brussel_sprouts.jpg",
+        "image": "brussel_sprouts.jpg"
+      }
+    },
+    {
+      "pk": 20,
+      "model": "products.product",
+      "fields": {
+        "sku": "awcar035",
+        "name": "Carrots",
+        "description": "These vibrant orange roots are not only delicious but also a powerhouse of nutrients, promoting better vision, glowing skin, and overall wellness. Whether you’re whipping up a hearty stew, blending a nutritious juice, or munching on a raw snack, our carrots are carefully selected to bring you the best quality.",
+        "price": 0.35,
+        "category": 2,
+        "rating": 4.8,
+        "image_url": "media/carrots.jpg",
+        "image": "carrots.jpg"
+      }
+    },
+    {
+      "pk": 21,
+      "model": "products.product",
+      "fields": {
+        "sku": "awcab050",
+        "name": "Cabbage",
+        "description": "Crisp, nutritious, and versatile, our fresh green cabbage is a must-have for any kitchen. Packed with vitamins C and K, it’s a healthy addition to salads, stir-fries, soups, and more. Grown naturally and hand-picked at peak freshness, this cabbage is firm, with tightly packed leaves and a vibrant green color that promises exceptional quality.",
+        "price": 0.5,
+        "category": 2,
+        "rating": 4.4,
+        "image_url": "media/cabbage.jpg",
+        "image": "cabbage.jpg"
+      }
+    },
+    {
+      "pk": 22,
+      "model": "products.product",
+      "fields": {
+        "sku": "awswe110",
+        "name": "Swedes",
+        "description": "Discover the natural sweetness of fresh swede, also known as rutabaga! Perfect for hearty soups, stews, mashes, or roasted dishes, this nutrient-rich root vegetable adds a touch of earthiness and vibrant flavor to your meals.",
+        "price": 1.1,
+        "category": 2,
+        "rating": 5,
+        "image_url": "media/swede.jpg",
+        "image": "swede.jpg"
+      }
+    },
+    {
+      "pk": 23,
+      "model": "products.product",
+      "fields": {
+        "sku": "awbro135",
+        "name": "Broccoli",
+        "description": "Experience the crisp, vibrant flavor of our Fresh Broccoli Florets, a versatile and nutrient-packed vegetable that’s a staple for healthy eating. Whether you’re cooking a gourmet meal or preparing a quick snack, this premium broccoli delivers unmatched freshness and quality.",
+        "price": 1.35,
+        "category": 2,
+        "rating": 4.9,
+        "image_url": "media/broccoli.jpg",
+        "image": "broccoli.jpg"
+      }
+    },
+    {
+      "pk": 24,
+      "model": "products.product",
+      "fields": {
+        "sku": "awkal600",
+        "name": "Kale",
+        "description": "Add a burst of health to your meals with our fresh organic kale. This leafy green superfood is packed with essential nutrients, including vitamins A, C, and K, fiber, and antioxidants. Perfect for smoothies, salads, soups, and sautéed dishes, kale brings a rich, slightly earthy flavor to your table. Grown without harmful chemicals, our kale is crisp, tender, and harvested at peak freshness for maximum flavor and nutrition.",
+        "price": 6,
+        "category": 2,
+        "rating": 4.8,
+        "image_url": "media/kale.jpg",
+        "image": "kale.jpg"
+      }
+    },
+    {
+      "pk": 25,
+      "model": "products.product",
+      "fields": {
+        "sku": "precarjam250",
+        "name": "Carrot Jam",
+        "description": "Experience the wholesome goodness of our Carrot Jam, made from fresh, handpicked carrots and a blend of natural sweeteners. This unique spread combines the earthy sweetness of carrots with a hint of citrus or spice for a taste that is both comforting and adventurous.",
+        "price": 2.5,
+        "category": 3,
+        "rating": 4,
+        "image_url": "media/carrot_jam.jpg",
+        "image": "carrot_jam.jpg"
+      }
+    },
+    {
+      "pk": 26,
+      "model": "products.product",
+      "fields": {
+        "sku": "prerhujam250",
+        "name": "Rhubarb Jam",
+        "description": "Discover the tangy sweetness of our handcrafted Rhubarb Jam! Made with ripe, garden-fresh rhubarb, this jam strikes the perfect balance between tart and sweet, delivering a flavor that’s delightfully bold and refreshingly unique. Perfect for spreading on toast, pairing with cheeses, or adding a zesty twist to your favorite desserts, our Rhubarb Jam is a versatile treat that transforms everyday meals into something special.",
+        "price": 2.5,
+        "category": 3,
+        "rating": 4.5,
+        "image_url": "media/rubarb_jam.jpg",
+        "image": "rubarb_jam.jpg"
+      }
+    },
+    {
+      "pk": 27,
+      "model": "products.product",
+      "fields": {
+        "sku": "pretomchu250",
+        "name": "Tomato Chutney",
+        "description": "A tangy and flavorful condiment that brings a burst of zest to your meals. Made from ripe, juicy tomatoes, expertly blended with aromatic spices and a hint of sweetness, our tomato chutney is the perfect companion to Indian breads, snacks, and even your favorite Western dishes. Whether you're looking to enhance a simple meal or add depth to a gourmet spread, this versatile chutney is a must-have in your kitchen. Naturally made, free from artificial preservatives, and packed with authentic taste in every spoonful.",
+        "price": 2.5,
+        "category": 3,
+        "rating": 5,
+        "image_url": "media/tomato_chutney.jpg",
+        "image": "tomato_chutney.jpg"
+      }
+    },
+    {
+      "pk": 28,
+      "model": "products.product",
+      "fields": {
+        "sku": "prepicbee250",
+        "name": "Pickled Beetroot",
+        "description": "Indulge in the rich taste of our pickled beetroot, crafted from farm-fresh beets harvested at peak ripeness. Each slice is infused with a delicate balance of vinegar, spices, and just a touch of sweetness to bring out the beetroot's natural earthy goodness.",
+        "price": 2.5,
+        "category": 3,
+        "rating": 4.4,
+        "image_url": "media/pickled_beetroot.jpg",
+        "image": "pickled_beetroot.jpg"
+      }
+    },
+    {
+      "pk": 29,
+      "model": "products.product",
+      "fields": {
+        "sku": "prespipumbut250",
+        "name": "Spiced Pumpkin Butter",
+        "description": "Indulge in the warm, comforting flavors of autumn with our Spiced Pumpkin Butter. This rich, velvety spread blends the sweetness of pure pumpkin with a carefully crafted mix of cinnamon, nutmeg, and allspice, creating the perfect balance of spice and sweetness. Whether slathered on toast, paired with pancakes, or stirred into oatmeal, this pumpkin butter is a versatile addition to your fall favorites. Made with high-quality ingredients, it’s a delightful way to bring the essence of the season into your kitchen year-round.",
+        "price": 2.5,
+        "category": 3,
+        "rating": 4.7,
+        "image_url": "media/spiced_pumpkin_butter.jpg",
+        "image": "spiced_pumpkin_butter.jpg"
+      }
+    },
+    {
+      "pk": 30,
+      "model": "products.product",
+      "fields": {
+        "sku": "prekalchi100",
+        "name": "Kale Chips",
+        "description": "Snack smarter with our Kale Chips, a nutritious and guilt-free alternative to traditional chips. Made from premium, handpicked kale leaves, these chips are roasted to perfection, preserving their vibrant color and satisfying crunch. Whether you're looking for a low-calorie snack or a healthy addition to your meal, these kale chips are packed with essential vitamins, fiber, and antioxidants to keep you feeling energized. Priced at £1.00 per 100g",
+        "price": 1,
+        "category": 3,
+        "rating": 5,
+        "image_url": "media/kale_chips.jpg",
+        "image": "kale_chips.jpg"
+      }
+    },
+    {
+      "pk": 31,
+      "model": "products.product",
+      "fields": {
+        "sku": "aggkseekit250",
+        "name": "Seed Kits",
+        "description": "Transform your home into a vibrant garden with our Home Gardening Seed Kit. Whether you're new to gardening or a green-thumbed enthusiast, this kit makes growing your own vegetables, fruits, herbs, microgreens a breeze. Perfect for small spaces, apartments, or balconies, it includes everything you need to get started and enjoy the satisfaction of nurturing your own plants.",
+        "price": 2.5,
+        "category": 4,
+        "rating": 5,
+        "image_url": "media/seed_kits.jpg",
+        "image": "seed_kits.jpg"
+      }
+    },
+    {
+      "pk": 32,
+      "model": "products.product",
+      "fields": {
+        "sku": "aggkplabedkit500",
+        "name": "Plant Bed Kit",
+        "description": "Transform your outdoor space into a thriving garden with the Premium Plant Bed Kit. This all-in-one solution is perfect for both beginner and experienced gardeners looking to grow vegetables, herbs, flowers, or ornamental plants. Whether you have limited space or want to organize your garden, our easy-to-assemble raised garden bed provides the ideal environment for your plants to flourish.",
+        "price": 5,
+        "category": 4,
+        "rating": 4.9,
+        "image_url": "media/plant_bed_kit.jpg",
+        "image": "plant_bed_kit.jpg"
+      }
+    },
+    {
+      "pk": 33,
+      "model": "products.product",
+      "fields": {
+        "sku": "aggksoienhfer2000",
+        "name": "Soil enhancers and fertilizers",
+        "description": "Unlock the full potential of your garden with our Soil Enhancers and Fertilizers Kit. Whether you're a beginner or a seasoned gardener, this all-in-one kit is designed to improve soil quality, enhance plant growth, and deliver vibrant, healthy plants year-round.",
+        "price": 20,
+        "category": 4,
+        "rating": 4.6,
+        "image_url": "media/soil_enhancers.jpg",
+        "image": "soil_enhancers.jpg"
+      }
+    },
+    {
+      "pk": 34,
+      "model": "products.product",
+      "fields": {
+        "sku": "aggkgartoo2500",
+        "name": "Gardening Tools",
+        "description": "Transform your gardening experience with our premium Gardening Tools Kit—the perfect set for beginners and seasoned gardeners alike! Whether you’re planting, pruning, weeding, or digging, this versatile kit provides everything you need to tend to your garden with ease and precision.",
+        "price": 25,
+        "category": 4,
+        "rating": 4.6,
+        "image_url": "media/garden_tools.jpg",
+        "image": "garden_tools.jpg"
+      }
+    },
+    {
+      "pk": 35,
+      "model": "products.product",
+      "fields": {
+        "sku": "aghkharbasapr500",
+        "name": "Harvesting Basket and Aprons",
+        "description": "Maximize your harvests with the ultimate combo of practicality and comfort! Our Harvesting Basket and Aprons Set is designed to make collecting your fruits, vegetables, and flowers easier than ever. Whether you're a home gardener or a professional farmer, this set has everything you need for efficient harvesting.",
+        "price": 5,
+        "category": 5,
+        "rating": 4.8,
+        "image_url": "media/harvest_basket_apron.jpg",
+        "image": "harvest_basket_apron.jpg"
+      }
+    },
+    {
+      "pk": 36,
+      "model": "products.product",
+      "fields": {
+        "sku": "akhkfooprekit1500",
+        "name": "Food Preserve Kit",
+        "description": "Perfect for home cooks, gardeners, and food enthusiasts, this comprehensive kit is designed to help you preserve food naturally, keeping it fresh for days or even weeks longer than traditional storage methods. This all-in-one preservation kit includes everything you need to extend the freshness of your food without relying on harmful chemicals or artificial preservatives. Whether you're storing fresh produce, prepping meals in advance, or freezing leftovers, this kit has got you covered. ",
+        "price": 15,
+        "category": 5,
+        "rating": 4.7,
+        "image_url": "media/food_preserve_kit.jpg",
+        "image": "food_preserve_kit.jpg"
+      }
+    },
+    {
+      "pk": 37,
+      "model": "products.product",
+      "fields": {
+        "sku": "aghkfoorac500",
+        "name": "Food Rack",
+        "description": "Organize your kitchen effortlessly with our Multi-Tier Food Storage Rack. Designed to maximize storage space while keeping your food neatly arranged, this versatile rack is perfect for any modern kitchen. Whether you need a place for canned goods, spices, dry snacks, or even fresh fruits and vegetables, this rack provides an efficient, accessible solution.",
+        "price": 5,
+        "category": 5,
+        "rating": 4.5,
+        "image_url": "media/food_rack.jpg",
+        "image": "food_rack.jpg"
+      }
+    },
+    {
+      "pk": 38,
+      "model": "products.product",
+      "fields": {
+        "sku": "aggthyd7500",
+        "name": "Hydroponic Kit",
+        "description": "Transform your home into a thriving garden with our Hydroponic Gardening Kit! Whether you're a beginner or an experienced gardener, this all-in-one kit offers everything you need to grow a variety of plants without soil. Hydroponic gardening is the future of sustainable farming, offering faster growth, cleaner environments, and healthier produce.",
+        "price": 75,
+        "category": 6,
+        "rating": 4.6,
+        "image_url": "media/hydroponic.jpg",
+        "image": "hydroponic.jpg"
+      }
+    },
+    {
+      "pk": 39,
+      "model": "products.product",
+      "fields": {
+        "sku": "aggtgrolig5000",
+        "name": "Grow Lights Kit",
+        "description": "Unlock the potential of indoor gardening with our Grow Lights Kit, designed to provide your plants with the perfect environment for optimal growth, no matter the season. Ideal for herbs, flowers, vegetables, succulents, and more, this all-in-one kit delivers essential light spectrum for plants to thrive indoors.",
+        "price": 50,
+        "category": 6,
+        "rating": 3.9,
+        "image_url": "media/growlights.jpg",
+        "image": "growlights.jpg"
+      }
+    },
+    {
+      "pk": 40,
+      "model": "products.product",
+      "fields": {
+        "sku": "aggtsmasen3500",
+        "name": "Smart Sensors Kit (moisture, pH, temperature)",
+        "description": "Take control of your garden or indoor plant environment with the Smart Sensors Kit, designed to provide precise, real-time readings for moisture, pH, and temperature. Whether you're a gardening pro or just getting started, this easy-to-use kit ensures your plants are always thriving in the optimal conditions.",
+        "price": 35,
+        "category": 6,
+        "rating": 5,
+        "image_url": "media/smart_sensor.jpg",
+        "image": "smart_sensor.jpg"
+      }
+    }
+  ]
