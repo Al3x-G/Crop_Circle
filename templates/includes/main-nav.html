@@ -1,5 +1,5 @@
 <!-- All HTML was initially taken from https://github.com/Code-Institute-Solutions/Boutique-Ado/blob/master/05-The-Home-Page/Main-Site-Navigation/templates/includes/main-nav.html-->
-<!-- All commits/changes after this were modified to suit the design of this project*/-->
+<!-- All commits/changes after this were modified to suit the design of this project-->
 
 
 <div class="collapse navbar-collapse" id="main-nav">
@@ -21,10 +21,10 @@
                 Produce
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="produce-link">
-                <a href="" class="dropdown-item">Spring &amp; Summer</a>
-                <a href="" class="dropdown-item">Autumn &amp; Winter</a>
-                <a href="" class="dropdown-item">Preserves</a>
-                <a href="" class="dropdown-item">All Produce</a>
+                <a href="{% url 'products' %}?category=spring_summer" class="dropdown-item">Spring &amp; Summer</a>
+                <a href="{% url 'products' %}?category=autumn_winter" class="dropdown-item">Autumn &amp; Winter</a>
+                <a href="{% url 'products' %}?category=preserve" class="dropdown-item">Preserves</a>
+                <a href="{% url 'products' %}?category=spring_summer,autumn_winter,preserve" class="dropdown-item">All Produce</a>
             </div>
         </li>
 
@@ -33,9 +33,9 @@
                 Agrikits
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="agrikits-link">
-                <a href="" class="dropdown-item">GrowKits</a>
-                <a href="" class="dropdown-item">HarvestKits</a>
-                <a href="" class="dropdown-item">GrowTech</a>
+                <a href="{% url 'products' %}?category=grow_kits" class="dropdown-item">GrowKits</a>
+                <a href="{% url 'products' %}?category=harvest_kits" class="dropdown-item">HarvestKits</a>
+                <a href="{% url 'products' %}?category=grow_tech" class="dropdown-item">GrowTech</a>
             </div>
         </li>
     </ul>
