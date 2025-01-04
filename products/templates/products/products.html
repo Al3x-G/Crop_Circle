@@ -126,4 +126,56 @@
         </div>
     </div>
 </div>
+<div class="btt-button shadow-sm rounded-0 border border-black">
+    <a class="btt-link d-flex h-100">
+        <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+    </a>	
+</div>
+{% endblock %}
+
+<!-- Javascript for top of the page button -->
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+		$('.btt-link').click(function(e) {
+			window.scrollTo(0,0)
+		})
+	</script>
+    <!-- Javascript for source select box -->
+    <script type="text/javascript">
+        // Attach an event listener to the #sort-selector element that triggers when its value changes
+        $('#sort-selector').change(function() {
+            // Store the jQuery-wrapped selector object for reference
+            var selector = $(this);
+    
+            // Get the current page URL using the browser's window.location object
+            var currentUrl = new URL(window.location);
+    
+            // Get the value of the selected option in the dropdown
+            var selectedVal = selector.val();
+    
+            // Check if the selected value is not "reset"
+            if (selectedVal != "reset") {
+                // Extract the sort field (e.g., "price", "rating") from the selected value
+                var sort = selectedVal.split("_")[0];
+                // Extract the sort direction (e.g., "ascending", "descending") from the selected value
+                var direction = selectedVal.split("_")[1];
+    
+                // Update the "sort" parameter in the current URL to the chosen field
+                currentUrl.searchParams.set("sort", sort);
+                // Update the "direction" parameter in the current URL to the chosen direction
+                currentUrl.searchParams.set("direction", direction);
+    
+                // Redirect the browser to the updated URL with the new sort parameters
+                window.location.replace(currentUrl);
+            } else {
+                // If the selected value is "reset", remove the "sort" and "direction" parameters from the URL
+                currentUrl.searchParams.delete("sort");
+                currentUrl.searchParams.delete("direction");
+    
+                // Redirect the browser to the updated URL without the sort parameters
+                window.location.replace(currentUrl);
+            }
+        });
+    </script>
 {% endblock %}
