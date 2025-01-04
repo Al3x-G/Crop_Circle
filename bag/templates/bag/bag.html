@@ -15,22 +15,22 @@
         <div class="row">
             <div class="col">
                 <hr>
-                <h2 class="logo-font mb-4">Shopping Bag</h2>
+                <h2 class="logo-font mb-4 text-center">Shopping Bag</h2>
                 <hr>
             </div>
         </div>
 
         <div class="row">
-            <div class="col">
+            <div class="col text-center">
                 {% if bag_items %}
                     <div class="table-responsive rounded"></div>
                 {% else %}
                     <p class="lead mb-5">Looks like your bag is empty!</p>
                     <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
                         <span class="icon">
-                            <i class="fas fa-chevron-left"></i>
+                            <i class="fa-solid fa-store"></i>
                         </span>
-                        <span class="text-uppercase">Add some goodies to your bag! Click to explore!</span>
+                        <span>Add some goodies to your bag! Click to explore!</span>
                     </a>
                 {% endif %}
             </div>
