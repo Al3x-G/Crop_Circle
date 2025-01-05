@@ -1,5 +1,7 @@
 from decimal import Decimal
 from django.conf import settings
+from django.shortcuts import get_object_or_404
+from products.models import Product
 
 """
 Define the function bag_contents that will calculate the contents of the
@@ -18,6 +20,22 @@ def bag_contents(request):
 
     # Initialize the product count to 0
     product_count = 0
+
+    # Access shopping bag in session (if exists) or an empty dict if not
+    bag = request.session.get('bag', {})
+
+    # Loop through shopping bag, calculate total price and product count,
+    # Create a list of dictionaries containing
+    # product details, quantity, and item ID.
+    for item_id, quantity in bag.items():
+        product = get_object_or_404(Product, pk=item_id)  # Find product id
+        total += quantity * product.price  # Add cost of the current item
+        product_count += quantity  # Increment the total product count
+        bag_items.append({  # Append product details to the list for later use
+            'item_id': item_id,
+            'quantity': quantity,
+            'product': product,
+            })
 
     # Check if total is less than the free delivery threshold (from settings)
     if total < settings.FREE_DELIVERY_THRESHOLD:
