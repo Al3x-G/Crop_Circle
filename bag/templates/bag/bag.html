@@ -76,7 +76,7 @@
                                         </div>
                                     </form>
                                     <a class="update-link text-info"><small>Update</small></a>
-                                    <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data-size="{{ item.size }}"><small>Remove</small></a>
+                                    <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"><small>Remove</small></a>
                                 </td>
                                 <td class="py-3">
                                     <p class="my-0">£{{ item.product.price }}</p>
@@ -126,3 +126,37 @@
         </div>
     </div>
 {% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{% include 'products/includes/quantity_input_script.html' %}
+{% endblock %}
+
+<script type="text/javascript">
+    // Update quantity on click
+    $('.update-link').click(function(e) {
+        // Find the preceding form element with the class "update-form"
+        var form = $(this).prev('.update-form');
+        // Submit the form, triggering its associated action
+        form.submit();
+    });
+
+    // Remove item and reload on click
+    $('.remove-item').click(function(e) {
+        // Get the CSRF token from the template variable to ensure secure requests
+        var csrfToken = "{{ csrf_token }}";
+        // Extract the item ID from the clicked element's ID (e.g., "remove_123" -> "123")
+        var itemId = $(this).attr('id').split('remove_')[1];
+        // Construct the URL to send the request to, dynamically including the item ID
+        var url = `/bag/remove/${itemId}`;
+        // Prepare the data to send with the POST request, including the CSRF token
+        var data = {'csrfmiddlewaretoken': csrfToken};
+
+        // Make an asynchronous POST request to remove the item
+        $.post(url, data)
+         .done(function() {
+             // Once the request completes successfully, reload the page to reflect changes
+             location.reload();
+         });
+    });
+</script>
