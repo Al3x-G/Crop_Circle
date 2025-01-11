@@ -1,4 +1,12 @@
+import uuid
+
 from django.db import models
+from django.db.models import Sum
+from django.conf import settings
+
+from django_countries.fields import CountryField
+
+from products.models import Product
 
 # Created models for the checkout app here.
 
@@ -9,7 +17,7 @@ class Order(models.Model):
     full_name = models.CharField(max_length=50, null=False, blank=False)
     email = models.EmailField(max_length=254, null=False, blank=False)
     phone_number = models.CharField(max_length=20, null=False, blank=False)
-    country = models.CharField(max_length=40, null=False, blank=False)
+    country = CountryField(blank_label='Country *', null=False, blank=False)
     postcode = models.CharField(max_length=20, null=True, blank=True)
     town_or_city = models.CharField(max_length=40, null=False, blank=False)
     street_address1 = models.CharField(max_length=80, null=False, blank=False)
@@ -18,9 +26,58 @@ class Order(models.Model):
     date = models.DateTimeField(auto_now_add=True)
     delivery_cost = models.DecimalField(max_digits=6, decimal_places=2,
                                         null=False, default=0)
-    order_total = models.DecimalField(max_digits=10, decimal_places=2, 
-                                        null=False, default=0)
-    grand_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)  # noqa: E501
+    order_total = models.DecimalField(max_digits=10, decimal_places=2,
+                                      null=False, default=0)
+    grand_total = models.DecimalField(max_digits=10, decimal_places=2,
+                                      null=False, default=0)
+
+    def _generate_order_number(self):
+        """
+        Generates a unique, uppercase order number.
+        """
+        # This is done using a randomly generated UUID,
+        # converted to a hexadecimal string.
+        # UUID ensures uniqueness, and `.upper()` converts it to uppercase.
+        return uuid.uuid4().hex.upper()
+
+    def update_total(self):
+        """
+        Updates the order's total cost,
+        including delivery charges, if applicable.
+        """
+        # Aggregate the sum of 'lineitem_total' across all related line items
+        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum']  # noqa: E501 (Fix flake 8 line too long)
+
+        # Check if the order qualifies for free delivery (set in settings)
+        if self.order_total < settings.FREE_DELIVERY_THRESHOLD:
+            # Calculate delivery cost as a percentage of the order total
+            self.delivery_cost = self.order_total * settings.STANDARD_DELIVERY_PERCENTAGE / 100  # noqa: E501 (Fix flake 8 line too long)
+        else:
+            # No delivery cost for orders above the threshold
+            self.delivery_cost = 0
+
+        # Calculate the grand total (order total + delivery cost)
+        self.grand_total = self.order_total + self.delivery_cost
+
+        # Save the updated totals to the database
+        self.save()
+
+    def save(self, *args, **kwargs):
+        """
+        Overrides the default save method
+        to ensure the order number is generated.
+        """
+        if not self.order_number:
+            # Generate a unique order number if it doesn't already exist
+            self.order_number = self._generate_order_number()
+        # Call the superclass's save method to save the instance
+        super().save(*args, **kwargs)
+
+    def __str__(self):
+        """
+        Returns a string representation of the order.
+        """
+        return self.order_number
 
 
 class OrderLineItem(models.Model):
@@ -29,9 +86,23 @@ class OrderLineItem(models.Model):
                               related_name='lineitems')
     product = models.ForeignKey(Product, null=False, blank=False,
                                 on_delete=models.CASCADE)
-    product_size = models.CharField(max_length=2, null=True,
-                                    blank=True)  # XS, S, M, L, XL
     quantity = models.IntegerField(null=False, blank=False, default=0)
     lineitem_total = models.DecimalField(max_digits=6, decimal_places=2,
                                          null=False, blank=False,
                                          editable=False)
+
+    def save(self, *args, **kwargs):
+        """
+        Overrides the default save method to calculate the line item total.
+        """
+        # Calculate the total cost for this line item (price * quantity)
+        self.lineitem_total = self.product.price * self.quantity
+
+        # Call the superclass's save method to save to the database
+        super().save(*args, **kwargs)
+
+    def __str__(self):
+        """
+        Returns a string representation of the line item.
+        """
+        return f'SKU {self.product.sku} on order {self.order.order_number}'
