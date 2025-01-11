@@ -124,25 +124,28 @@
          (https://docs.djangoproject.com/en/5.1/ref/contrib/messages/#message-levels) -->
 
     {% if messages %} <!-- Check if there are any messages to display -->
-    <div class="message-container"> 
-        {% for message in messages %} <!-- Loop through each message -->
-            {% with message.level as level %} <!-- Store message level in a variable -->
-                {% if level == 40 %} <!-- If message level is 'error' (level 40) -->
-                    {% include 'includes/toasts/toast_error.html' %} <!-- Include error toast template -->
-                {% elif level == 30 %} <!-- If message level is 'warning' (level 30) -->
-                    {% include 'includes/toasts/toast_warning.html' %} <!-- Include warning toast template -->
-                {% elif level == 25 %} <!-- If message level is 'success' (level 25) -->
-                    {% include 'includes/toasts/toast_success.html' %} <!-- Include success toast template -->
-                {% else %} <!-- For any other message level (e.g., info) -->
-                    {% include 'includes/toasts/toast_info.html' %} <!-- Include info toast template -->
-                {% endif %}
-            {% endwith %}
-        {% endfor %}
-    </div>
+        <div class="message-container"> 
+            {% for message in messages %} <!-- Loop through each message -->
+                {% with message.level as level %} <!-- Store message level in a variable -->
+                    {% if level == 40 %} <!-- If message level is 'error' (level 40) -->
+                        {% include 'includes/toasts/toast_error.html' %} <!-- Include error toast template -->
+                    {% elif level == 30 %} <!-- If message level is 'warning' (level 30) -->
+                        {% include 'includes/toasts/toast_warning.html' %} <!-- Include warning toast template -->
+                    {% elif level == 25 %} <!-- If message level is 'success' (level 25) -->
+                        {% include 'includes/toasts/toast_success.html' %} <!-- Include success toast template -->
+                    {% else %} <!-- For any other message level (e.g., info) -->
+                        {% include 'includes/toasts/toast_info.html' %} <!-- Include info toast template -->
+                    {% endif %}
+                {% endwith %}
+            {% endfor %}
+        </div>
     {% endif %} <!-- End of message check -->
 
     {% block page_header %} 
     {% endblock %} 
+
+    {% block content %}
+    {% endblock %}
 
     <!-- Displays all Bootstrap toast notifications on the page when the script runs. -->
    
