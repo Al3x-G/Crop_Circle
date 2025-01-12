@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load bag_tools %}
 
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
@@ -19,14 +20,161 @@
         <div class="row">
             <div class="col">
                 <hr>
-                <h2 class="logo-font mb-4 text-center">Shopping Bag</h2>
+                <h2 class="logo-font mb-4 text-center">Checkout</h2>
                 <hr>
             </div>
         </div>
 
         <div class="row">
+            <!-- Order Summary Section -->
+            <div class="col-12 col-lg-6 order-lg-last mb-5">
+                
+                <!-- Heading showing the order summary and the number of products in the order -->
+                <p class="text-muted">Order Summary ({{ product_count }})</p>
+                
+                <!-- Row to display the "Item" and "Subtotal" headers -->
+                <div class="row">
+                    <div class="col-7 offset-2">
+                        <p class="mb-1 mt-0 small text-muted">Item</p>
+                    </div>
+                    <div class="col-3 text-right">
+                        <p class="mb-1 mt-0 small text-muted">Subtotal</p>
+                    </div>
+                </div>
+                
+                <!-- Loop through each item in the shopping bag (bag_items) and display its details -->
+                {% for item in bag_items %}
+                    <div class="row">
+                        <!-- If the product has an image, display it; otherwise, show a default image -->
+                        <div class="col-2 mb-1">
+                            <a href="{% url 'product_detail' item.product.id %}">
+                                {% if item.product.image %}
+                                    <img class="w-100" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                                {% else %}
+                                    <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
+                                {% endif %}
+                            </a>
+                        </div>
+                        
+                        <!-- Display product name and quantity -->
+                        <div class="col-7">
+                            <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                            <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
+                        </div>
+                        
+                        <!-- Display the subtotal for the item (calculated based on quantity) -->
+                        <div class="col-3 text-right">
+                            <p class="my-0 small text-muted">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+                
+                <!-- Separator between items and order summary totals -->
+                <hr class="my-0">
+                
+                <!-- Order Total, Delivery Cost, and Grand Total Section -->
+                <div class="row text-black text-right">
+                    <div class="col-7 offset-2">
+                        <p class="my-0">Order Total:</p>
+                        <p class="my-0">Delivery:</p>
+                        <p class="my-0">Grand Total:</p>
+                    </div>
+                    
+                    <!-- Column for the actual values of the totals -->
+                    <div class="col-3">
+                        <!-- Display the formatted order total -->
+                        <p class="my-0">£{{ total | floatformat:2 }}</p>
+                        <!-- Display the formatted delivery cost -->
+                        <p class="my-0">£{{ delivery | floatformat:2 }}</p>
+                        <!-- Display the formatted grand total in bold -->
+                        <p class="my-0"><strong>£{{ grand_total | floatformat:2 }}</strong></p>
+                    </div>
+                </div>
+            </div>
             <div class="col-12 col-lg-6">
                 <p class="text-muted">Almost there! Fill out the form below to get your goodies.</p>
+                <form action="{% url 'checkout' %}" method="POST" id="payment-form">
+                    <!-- CSRF token for security (prevents Cross-Site Request Forgery attacks) -->
+                    {% csrf_token %}
+                    
+                    <!-- Fieldset for the 'Details' section (personal information) -->
+                    <fieldset class="rounded px-3 mb-5">
+                        <legend class="fieldset-label small text-black px-2 w-auto">Details</legend>
+                        <!-- Render form fields for 'Full Name' and 'Email', styled with crispy forms -->
+                        {{ order_form.full_name | as_crispy_field }}
+                        {{ order_form.email | as_crispy_field }}
+                    </fieldset>
+                    
+                    <!-- Fieldset for the 'Delivery' section (address information) -->
+                    <fieldset class="rounded px-3 mb-5">
+                        <legend class="fieldset-label small text-black px-2 w-auto">Delivery</legend>
+                        <!-- Render form fields for phone number and address-related fields, using crispy forms -->
+                        {{ order_form.phone_number | as_crispy_field }}
+                        {{ order_form.street_address1 | as_crispy_field }}
+                        {{ order_form.street_address2 | as_crispy_field }}
+                        {{ order_form.town_or_city | as_crispy_field }}
+                        {{ order_form.county | as_crispy_field }}
+                        {{ order_form.postcode | as_crispy_field }}
+                        {{ order_form.country | as_crispy_field }}
+                        
+                        <!-- Checkbox to save delivery information to user profile (conditional display based on authentication) -->
+                        <div class="form-check form-check-inline float-right mr-0">
+                            {% if user.is_authenticated %}
+                                <!-- If the user is authenticated, show the checkbox to save delivery info -->
+                                <label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
+                                <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
+                            {% else %}
+                                <!-- If not authenticated, provide links to create an account or login -->
+                                <label class="form-check-label" for="id-save-info">
+                                    <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or 
+                                    <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
+                                </label>
+                            {% endif %}
+                        </div>
+                    </fieldset>
+                    
+                    <!-- Fieldset for the 'Payment' section (payment details) -->
+                    <fieldset class="px-3">
+                        <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
+                        <!-- Placeholder for Stripe's Card Element (for entering card details) -->
+                        <div class="mb-3" id="card-element"></div>
+                        
+                        <!-- Placeholder for displaying payment errors (if any occur) -->
+                        <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+                    </fieldset>
+                    
+                    <!-- Submit button section, aligned to the right with margin spacing -->
+                    <div class="submit-button text-right mt-5 mb-2">
+                        
+                        <!-- Link to 'view_bag' page for adjusting the bag (shopping bag) -->
+                        <a href="{% url 'view_bag' %}" class="btn btn-outline-black rounded-0">
+                            <!-- Left arrow icon for visual indication -->
+                            <span class="icon">
+                                <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="font-weight-bold">Adjust Bag</span>
+                        </a>
+                        
+                        <!-- Button to complete the order -->
+                        <button id="submit-button" class="btn btn-black rounded-0">
+                            <span class="font-weight-bold">Complete Order</span>
+                            <!-- Lock icon to symbolize security during the order process -->
+                            <span class="icon">
+                                <i class="fas fa-lock"></i>
+                            </span>
+                        </button>
+                        
+                        <!-- Information about the total amount that will be charged to the user -->
+                        <p class="small text-danger my-0">
+                            <!-- Warning icon to catch user attention -->
+                            <span class="icon">
+                                <i class="fas fa-exclamation-circle"></i>
+                            </span>
+                            <!-- Display the total amount the user will be charged, formatted with two decimal places -->
+                            <span>Your card will be charged <strong>£{{ grand_total|floatformat:2 }}</strong></span>
+                        </p>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
