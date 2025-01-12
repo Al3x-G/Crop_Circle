@@ -63,6 +63,12 @@ form.addEventListener('submit', function(ev) {
     // Disable the submit button to prevent multiple submissions
     $('#submit-button').attr('disabled', true);
 
+    // Toggle the visibility of the payment form with a fade animation over 100 milliseconds.
+    $('#payment-form').fadeToggle(100);
+
+    // Toggle the visibility of the loading overlay with a fade animation over 100 milliseconds.
+    $('#loading-overlay').fadeToggle(100);
+
     // Use Stripe to confirm the card payment with the client secret
     stripe.confirmCardPayment(clientSecret, {
         payment_method: {
@@ -82,6 +88,12 @@ form.addEventListener('submit', function(ev) {
 
             // Display the error message in the 'card-errors' div
             $(errorDiv).html(html);
+
+            // Toggle the visibility of the payment form with a fade animation over 100 milliseconds.
+            $('#payment-form').fadeToggle(100);
+
+            // Toggle the visibility of the loading overlay with a fade animation over 100 milliseconds.
+            $('#loading-overlay').fadeToggle(100);
 
             // Re-enable the card input and submit button for retrying the payment
             card.update({ 'disabled': false });
