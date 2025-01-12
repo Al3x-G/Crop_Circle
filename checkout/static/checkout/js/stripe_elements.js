@@ -6,9 +6,8 @@
     https://stripe.com/docs/stripe-js
 */
 
-// Directly assign the values from the script tags to JavaScript variables
-var stripe_public_key = document.getElementById('id_stripe_public_key').textContent.trim();
-var client_secret = document.getElementById('id_client_secret').textContent.trim();
+var stripe_public_key = $('#id_stripe_public_key').text().slice(1, -1);  // Get value, remove quotes
+var client_secret = $('#id_client_secret').text().slice(1, -1);  // Get value, remove quotes
 
 // Initialise Stripe with the public key
 var stripe = Stripe(stripe_public_key);
