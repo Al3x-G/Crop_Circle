@@ -6,11 +6,11 @@
     https://stripe.com/docs/stripe-js
 */
 
-var stripe_public_key = $('#id_stripe_public_key').text().slice(1, -1);  // Get value, remove quotes
-var client_secret = $('#id_client_secret').text().slice(1, -1);  // Get value, remove quotes
+var stripePublicKey = $('#id_stripe_public_key').text().slice(1, -1);  // Get value, remove quotes
+var clientSecret = $('#id_client_secret').text().slice(1, -1);  // Get value, remove quotes
 
 // Initialise Stripe with the public key
-var stripe = Stripe(stripe_public_key);
+var stripe = Stripe(stripePublicKey);
 
 // Create an instance of Elements
 var elements = stripe.elements();
@@ -48,4 +48,50 @@ card.addEventListener('change', function (event) {
     } else {
         errorDiv.textContent = '';
     }
+});
+
+// This code handles the entire process of submitting a payment form using Stripe Elements.
+var form = document.getElementById('payment-form');
+
+// Add an event listener to the form for when it is submitted
+form.addEventListener('submit', function(ev) {
+    ev.preventDefault();  // Prevent the default form submission behavior
+
+    // Disable the card element to prevent further updates while processing the payment
+    card.update({ 'disabled': true });
+
+    // Disable the submit button to prevent multiple submissions
+    $('#submit-button').attr('disabled', true);
+
+    // Use Stripe to confirm the card payment with the client secret
+    stripe.confirmCardPayment(clientSecret, {
+        payment_method: {
+            card: card,  // Pass the card element to Stripe
+        }
+    }).then(function(result) {
+        // If there was an error during payment confirmation, display the error message
+        if (result.error) {
+            var errorDiv = document.getElementById('card-errors');
+            
+            // Build HTML to display the error icon and message
+            var html = `
+                <span class="icon" role="alert">
+                <i class="fas fa-times"></i>
+                </span>
+                <span>${result.error.message}</span>`;
+
+            // Display the error message in the 'card-errors' div
+            $(errorDiv).html(html);
+
+            // Re-enable the card input and submit button for retrying the payment
+            card.update({ 'disabled': false });
+            $('#submit-button').attr('disabled', false);
+        } else {
+            // If the payment was successful, check if the payment intent status is 'succeeded'
+            if (result.paymentIntent.status === 'succeeded') {
+                // If payment was successful, submit the form to finalize the process
+                form.submit();
+            }
+        }
+    });
 });
