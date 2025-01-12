@@ -179,3 +179,17 @@
         </div>
     </div>
 {% endblock %}
+
+{% block postloadjs %}
+    <!-- 
+        The 'block.super' statement is used to include any content defined in the parent block,
+        this ensures that any JavaScript already defined in the parent block is preserved. 
+    -->
+    {{ block.super }}
+    <!-- Injecting the Stripe public key and client secret as JSON script tags -->
+    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+    {{ client_secret|json_script:"id_client_secret" }}
+    
+    <!-- Loading your custom Stripe Elements JavaScript -->
+    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
+{% endblock %}

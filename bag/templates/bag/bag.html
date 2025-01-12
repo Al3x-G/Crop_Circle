@@ -129,6 +129,10 @@
 {% endblock %}
 
 {% block postloadjs %}
+<!-- 
+    The 'block.super' statement is used to include any content defined in the parent block,
+    this ensures that any JavaScript already defined in the parent block is preserved. 
+-->
 {{ block.super }}
 
 
