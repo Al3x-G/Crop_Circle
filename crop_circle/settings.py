@@ -40,10 +40,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'django_countries',
+    'django_extensions',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    'django_extensions',
+    'crispy_forms',
     'home',
     'products',
     'bag',
@@ -62,6 +63,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'crop_circle.urls'
 
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -78,6 +81,13 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'bag.contexts.bag_contents',
             ],
+            # Specify the built-in template tags for the Crispy Forms library.
+            # These tags are used to render form layouts and individual
+            # form fields in templates with enhanced styling and customisation.
+            'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
+            ]
         },
     },
 ]
