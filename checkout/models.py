@@ -46,7 +46,7 @@ class Order(models.Model):
         including delivery charges, if applicable.
         """
         # Aggregate the sum of 'lineitem_total' across all related line items
-        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum']  # noqa: E501 (Fix flake 8 line too long)
+        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0  # noqa: E501 (Fix flake 8 line too long)
 
         # Check if the order qualifies for free delivery (set in settings)
         if self.order_total < settings.FREE_DELIVERY_THRESHOLD:
