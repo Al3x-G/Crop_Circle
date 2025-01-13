@@ -18,7 +18,8 @@ class OrderAdmin(admin.ModelAdmin):
 
     # Define the fields that will be read-only in the admin panel.
     readonly_fields = ('order_number', 'date',
-                       'delivery_cost', 'order_total', 'grand_total',)
+                       'delivery_cost', 'order_total', 'grand_total',
+                       'orginal_bag', 'strip_pid',)
 
     # Define the fields that will be displayed when
     # creating or editing an Order in the admin interface
@@ -26,13 +27,13 @@ class OrderAdmin(admin.ModelAdmin):
               'email', 'phone_number', 'country',
               'postcode', 'town_or_city', 'street_address1',
               'street_address2', 'county', 'delivery_cost',
-              'order_total', 'grand_total',)
+              'order_total', 'grand_total', 'orginal_bag', 'strip_pid',)
 
     # Define how the orders should be displayed.
     # These are the fields that will appear as columns in the list view
     list_display = ('order_number', 'date', 'full_name',
                     'order_total', 'delivery_cost',
-                    'grand_total',)
+                    'grand_total', 'orginal_bag', 'strip_pid',)
 
     # Define ordering of orders in the admin interface (by descending date)
     # This means orders will be listed from the most recent to the oldest
