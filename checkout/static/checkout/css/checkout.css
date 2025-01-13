@@ -41,6 +41,16 @@ https://stripe.com/docs/stripe-js
     border: 1px solid #000;
 }
 
+select,
+select option {
+  color: black; /* Set text color to black for the select and its options */
+}
+
+select:invalid,
+select option[value=""] {
+  color: #aab7c4 !important; /* Change text color to grey when the select element is invalid or the option value is empty */
+}
+
 #loading-overlay {
 	display: none;
 	position: fixed;
