@@ -9,7 +9,8 @@ body {
     background: url('/media/landingpage_background.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
-    color: #555;
+    /*color: #555;*/
+    color: #355e3b;
     font-family: 'Chelsea Market';
 }
 
