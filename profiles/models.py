@@ -15,23 +15,23 @@ class UserProfile(models.Model):
     # Stores the user's default phone number.
     default_phone_number = models.CharField(max_length=20, null=True, blank=True)  # noqa: E501 (Fix flake 8 line too long)
 
-    # A country field with a blank label.
-    default_country = CountryField(blank_label='Country *', null=True, blank=True)  # noqa: E501 (Fix flake 8 line too long)
-
-    # Stores the user's default postcode.
-    default_postcode = models.CharField(max_length=20, null=True, blank=True)
-
-    # Stores the user's default town or city.
-    default_town_or_city = models.CharField(max_length=40, null=True, blank=True)  # noqa: E501 (Fix flake 8 line too long)
-
     # Stores the first line of the user's default street address.
     default_street_address1 = models.CharField(max_length=80, null=True, blank=True)  # noqa: E501 (Fix flake 8 line too long)
 
     # Stores the second line of the user's default street address.
     default_street_address2 = models.CharField(max_length=80, null=True, blank=True)  # noqa: E501 (Fix flake 8 line too long)
 
+    # Stores the user's default town or city.
+    default_town_or_city = models.CharField(max_length=40, null=True, blank=True)  # noqa: E501 (Fix flake 8 line too long)
+
     # Stores the user's default county, nullable and blank fields allowed
     default_county = models.CharField(max_length=80, null=True, blank=True)
+
+    # Stores the user's default postcode.
+    default_postcode = models.CharField(max_length=20, null=True, blank=True)
+
+    # A country field with a blank label.
+    default_country = CountryField(blank_label='Country', null=True, blank=True)  # noqa: E501 (Fix flake 8 line too long)
 
     def __str__(self):
         # Returns the username associated with this user profile

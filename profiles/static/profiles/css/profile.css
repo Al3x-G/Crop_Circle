@@ -1,0 +1,8 @@
+#profile-update-form input::placeholder {
+    color: #aab7c4; /* Placeholder same colour as rest of the site */
+}
+
+#profile-update-form,
+.form-control {
+    color: black;
+}
