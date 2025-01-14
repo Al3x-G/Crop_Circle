@@ -3,6 +3,17 @@
   <head>
     <title>{% block head_title %}{% endblock %}</title>
     {% block extra_head %}
+    <style>
+      /* Centering CSS */
+      .center-wrapper {
+        display: flex;
+        justify-content: center; /* Horizontal centering */
+        align-items: center; /* Vertical centering */
+        height: 100vh; /* Full viewport height */
+        flex-direction: column; /* Stack elements vertically */
+        text-align: center; /* Optional: Center the text */
+      }
+    </style>
     {% endblock %}
   </head>
   <body>
@@ -31,9 +42,11 @@
         {% endif %}
       </ul>
     </div>
+
     {% block content %}
     {% endblock %}
     {% endblock %}
+    
     {% block extra_body %}
     {% endblock %}
   </body>
