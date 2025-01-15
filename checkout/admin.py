@@ -23,7 +23,7 @@ class OrderAdmin(admin.ModelAdmin):
 
     # Define the fields that will be displayed when
     # creating or editing an Order in the admin interface
-    fields = ('order_number', 'date', 'full_name',
+    fields = ('order_number', 'user_profile', 'date', 'full_name',
               'email', 'phone_number', 'country',
               'postcode', 'town_or_city', 'street_address1',
               'street_address2', 'county', 'delivery_cost',
