@@ -142,7 +142,7 @@ form.addEventListener('submit', function(ev) {
             } else {
                 // If the payment was successful, check if the payment intent status is 'succeeded'.
                 if (result.paymentIntent.status === 'succeeded') {
-                    // If payment was successful, submit the form to finalize the process.
+                    // If payment was successful, submit the form to finalise the process.
                     form.submit();
                 }
             }
