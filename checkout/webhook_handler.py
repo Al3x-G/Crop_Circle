@@ -4,6 +4,10 @@ from .models import Order, OrderLineItem
 from products.models import Product
 from profiles.models import UserProfile
 
+from django.core.mail import send_mail
+from django.template.loader import render_to_string
+from django.conf import settings
+
 import json
 import time
 
@@ -19,6 +23,37 @@ class StripeWH_Handler:
             containing the webhook data.
         """
         self.request = request
+
+    def _send_confirmation_email(self, order):
+        """
+        Sends a confirmation email to the user after an order is placed.
+        - Generates the subject and body of the email from templates.
+        - Sends the email using Django's send_mail function.
+        """
+        # Extract the customer's email address from the order.
+        cust_email = order.email
+
+        # Render the email subject using a template,
+        # passing the order as context.
+        subject = render_to_string(
+            'checkout/confirmation_emails/confirmation_email_subject.txt',
+            {'order': order}
+        )
+
+        # Render the body of the email using a template,
+        # passing the order and contact email.
+        body = render_to_string(
+            'checkout/confirmation_emails/confirmation_email_body.txt',
+            {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL}
+        )
+
+        # Use Django's send_mail function to send the email
+        send_mail(
+            subject,  # Subject of the email
+            body,     # Body of the email
+            settings.DEFAULT_FROM_EMAIL,  # Sender's email (in settings)
+            [cust_email]  # Recipient's email address (customer's email)
+        )
 
     def handle_event(self, event):
         """
