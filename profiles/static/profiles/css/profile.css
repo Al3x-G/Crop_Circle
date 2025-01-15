@@ -1,3 +1,9 @@
+/* Max height of profile form + submit button, incase user has many orders */
+.order-history {
+    max-height: 416px; 
+    overflow-y: auto;
+}
+
 #profile-update-form .form-control {
     color: black;
 }

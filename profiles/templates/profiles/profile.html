@@ -34,9 +34,52 @@
             </div>
             <div class="col-12 col-lg-6">
                 <p class="text-muted">Order History</p>
-                {{ orders }}
+                <div class="order-history table-responsive">
+                    <table class="table table-sm table-borderless">
+                        <thead>
+                            <tr>
+                                <th>Order Number</th>
+                                <th>Date</th>
+                                <th>Items</th>
+                                <th>Order Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Loop through each order in the orders context -->
+                            {% for order in orders %}
+                                <tr>
+                                    <!-- Display the order number as a link to the order's history page -->
+                                    <td>
+                                        <a href="{% url 'order_history' order.order_number %}" 
+                                           title="{{ order.order_number }}">
+                                            <!-- Truncate the order number to 6 characters for compact display -->
+                                            {{ order.order_number|truncatechars:6 }}
+                                        </a>
+                                    </td>
+                                    <!-- Display the date of the order -->
+                                    <td>{{ order.date }}</td>
+                                    <td>
+                                        <!-- Unordered list for displaying order line items -->
+                                        <ul class="list-unstyled">
+                                            <!-- Loop through all line items of the current order -->
+                                            {% for item in order.lineitems.all %}
+                                                <li class="small">
+                                                    <!-- Display the product name and quantity -->
+                                                    {{ item.product.name }} x{{ item.quantity }}
+                                                </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </td>
+                                    <!-- Display the grand total for the order -->
+                                    <td>${{ order.grand_total }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
+    </div>
 {% endblock %}
 
 {% block postloadjs %}
