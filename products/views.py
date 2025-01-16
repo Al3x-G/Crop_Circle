@@ -116,3 +116,47 @@ def add_product(request):
 
     # Render the template with the given context.
     return render(request, template, context)
+
+
+@login_required
+def edit_product(request, product_id):
+    """
+    Edit a product in the store.
+    Only accessible to superusers.
+    """
+    # Restrict access to superusers only.
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    # Retrieve the product by its primary key (ID) or return a 404 error.
+    product = get_object_or_404(Product, pk=product_id)
+
+    if request.method == 'POST':
+        # If the form is submitted, populate with POST data and uploaded files.
+        form = ProductForm(request.POST, request.FILES, instance=product)
+        if form.is_valid():
+            # Save the updated product to the database.
+            form.save()
+            messages.success(request, 'Successfully updated product!')
+            return redirect(reverse('product_detail', args=[product.id]))
+        else:
+            # Handle invalid form submissions with an error message.
+            messages.error(request,
+                           ('Failed to update product. '
+                            'Please ensure the form is valid.'))
+    else:
+        # Display the form pre-filled with the current product's data.
+        form = ProductForm(instance=product)
+        # Provide informational feedback about the product being edited.
+        messages.info(request, f'You are editing {product.name}')
+
+    # Define the template and context to render.
+    template = 'products/edit_product.html'
+    context = {
+        'form': form,        # The form for editing the product.
+        'product': product,  # The product being edited.
+    }
+
+    # Render the template with the provided context.
+    return render(request, template, context)
