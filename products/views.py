@@ -160,3 +160,29 @@ def edit_product(request, product_id):
 
     # Render the template with the provided context.
     return render(request, template, context)
+
+
+@login_required
+def delete_product(request, product_id):
+    """
+    Delete a product from the store.
+    Only accessible to superusers.
+    """
+    # Restrict access to superusers only.
+    if not request.user.is_superuser:
+        # Display an error message if the user is not a superuser.
+        messages.error(request, 'Sorry, only store owners can do that.')
+        # Redirect unauthorized users to the home page.
+        return redirect(reverse('home'))
+
+    # Retrieve the product by its primary key (ID) or return a 404 error.
+    product = get_object_or_404(Product, pk=product_id)
+
+    # Delete the product from the database.
+    product.delete()
+
+    # Display a success message confirming the product has been deleted.
+    messages.success(request, 'Product deleted!')
+
+    # Redirect to the products page after successful deletion.
+    return redirect(reverse('products'))
