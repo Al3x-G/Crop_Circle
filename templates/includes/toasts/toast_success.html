@@ -22,8 +22,12 @@
                     <div class="row">
                         <!-- Product image container - takes up 25% of row width -->
                         <div class="col-3 my-1">
+                            {% if item.product.image %}
                             <!-- Responsive product image that fills container width -->
-                            <img class="w-100" src="{{ item.product.image.url }}">
+                            <img class="w-100" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                            {% else %}
+                            <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
+                            {% endif %}
                         </div>
                         <!-- Product details container - takes up 75% of row width -->
                         <div class="col-9">

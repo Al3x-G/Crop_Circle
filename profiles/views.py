@@ -12,36 +12,43 @@ def profile(request):
     - Handles displaying the form and updating user profile,
     if the form is submitted with valid data.
     """
-    # Retrieve the user's profile or return a 404 error if not found
+    # Retrieve the user's profile or return a 404 error if not found.
     profile = get_object_or_404(UserProfile, user=request.user)
 
-    # Check if the form has been submitted (POST request)
+    # Check if the form has been submitted (POST request).
     if request.method == 'POST':
-        # Bind the form with the submitted data and existing profile instance
+        # Bind the form with the submitted data and existing profile instance.
         form = UserProfileForm(request.POST, instance=profile)
 
-        # If the form is valid, save the changes to the profile
+        # If the form is valid, save the changes to the profile.
         if form.is_valid():
             form.save()
-            # Display a success message to the user
+            # Display a success message to the user.
             messages.success(request, 'Profile updated successfully')
+        else:
+            # Display an error message if the form is invalid.
+            messages.error(request,
+                           ('Update failed. '
+                            'Please ensure the form is valid.'))
 
-    # If not a POST request (GET), create a form for displaying current profile
-    form = UserProfileForm(instance=profile)
+    else:
+        # If not a POST request (GET),
+        # create a form for displaying current profile.
+        form = UserProfileForm(instance=profile)
 
-    # Retrieve all orders associated with the user's profile
-    orders = profile.orders.all()
+        # Retrieve all orders associated with the user's profile.
+        orders = profile.orders.all()
 
-    # Define the template and context to render
-    template = 'profiles/profile.html'
-    context = {
-        'form': form,  # The profile form to be rendered
-        'orders': orders,  # The user's orders to be displayed
-        'on_profile_page': True,  # Flag indicating user is on their profile
-    }
+        # Define the template and context to render.any
+        template = 'profiles/profile.html'
+        context = {
+            'form': form,  # The profile form to be rendered.
+            'orders': orders,  # The user's orders to be displayed.
+            'on_profile_page': True,  # Flag indicating user on their profile.
+        }
 
-    # Render the template with the provided context (form and orders)
-    return render(request, template, context)
+        # Render the template with the provided context (form and orders).
+        return render(request, template, context)
 
 
 def order_history(request, order_number):
@@ -52,24 +59,24 @@ def order_history(request, order_number):
     - Renders the order details in a success page template.
     """
 
-    # Fetch order object using the order_number, or return a 404 if not found
+    # Fetch order object using the order_number, or return a 404 if not found.
     order = get_object_or_404(Order, order_number=order_number)
 
-    # Add an informational message for the user about the order
+    # Add an informational message for the user about the order.
     messages.info(request, (
         f'This is a past confirmation for order number {order_number}. '
         'A confirmation email was sent on the order date.'
     ))
 
-    # Define the template to be used for rendering the order details
+    # Define the template to be used for rendering the order details.
     template = 'checkout/checkout_success.html'
 
     # Context to pass to the template, including the order and
-    # a flag to indicate this is accessed from the profile
+    # a flag to indicate this is accessed from the profile.
     context = {
-        'order': order,  # The specific order to be displayed
-        'from_profile': True,  # Flag indicates view was via the user's profile
+        'order': order,  # The specific order to be displayed.
+        'from_profile': True,  # Flag indicates view via the user's profile.
     }
 
-    # Render the template with the given context and return the response
+    # Render the template with the given context and return the response.
     return render(request, template, context)

@@ -81,38 +81,38 @@ def add_product(request):
     - Only accessible to superusers.
     - Handles both GET and POST requests for the product creation form.
     """
-    # Check if the user is a superuser
+    # Check if the user is a superuser.
     if not request.user.is_superuser:
-        # Display an error message and redirect to home page if not authorised
+        # Display an error message and redirect to home page if not authorised.
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
 
     if request.method == 'POST':
-        # Create a form instance with POST data and uploaded files
+        # Create a form instance with POST data and uploaded files.
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
-            # Save the form to create a new product instance
+            # Save the form to create a new product instance.
             product = form.save()
-            # Display a success message
+            # Display a success message.
             messages.success(request, 'Successfully added product!')
-            # Redirect to the product detail page for the newly added product
+            # Redirect to the product detail page for the newly added product.
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            # Display an error message if the form is invalid
+            # Display an error message if the form is invalid.
             messages.error(request,
                            ('Failed to add product. '
                             'Please ensure the form is valid.'))
     else:
-        # Initialise an empty product form for GET requests
+        # Initialise an empty product form for GET requests.
         form = ProductForm()
 
-    # Define the template to render
+    # Define the template to render.
     template = 'products/add_product.html'
 
-    # Pass the form to the template context
+    # Pass the form to the template context.
     context = {
         'form': form,
     }
 
-    # Render the template with the given context
+    # Render the template with the given context.
     return render(request, template, context)
