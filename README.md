@@ -5,6 +5,7 @@
 ## Content List
 - [Crop Circle](#crop-circle-e-commerce-site)
 - [User Story](#user-story)
+- [How to Create a Django Project](#how-to-create-a-django-project)
 - [Features](#features)
 - [Database](#database)
 - [Technology](#technology)
@@ -13,16 +14,48 @@
 
 ## Crop Circle E-commerce site
 
-### Project and Customer Goals
+### Project Goals
 
-PLACEHOLDER
+The primary goal of this e-commerce website is to provide a user-friendly platform where customers can effortlessly discover and purchase seasonal food and home gardening equipment to grow their own produce. By streamlining the shopping experience with intuitive navigation and smart search features, the website aims to save time and enhance customer satisfaction. Additionally, the project seeks to inspire and empower individuals to embrace sustainable living by nurturing their green thumbs through easy access to quality gardening tools and resources. Ultimately, this platform aspires to build a community of eco-conscious individuals, fostering a love for home gardening and fresh, seasonal produce.
 
 
-### Features and Functionality
+## User Story
 
-PLACEHOLDER
+| User Story ID | As a/an | I want to be able to ... | So that I can... |
+| :--- | :--- | :--- | :---|
+| **VIEWING & NAVIGATION** |
+| 1 | Shopper | View a list of products| Select something to purchase |
+| 2 | Shopper | View a specific category of products | Quickly find products I'm interested in without having to search through all products |
+| 3 | Shopper | View individual product details | Identify the price, description, product rating, product image |
+| 4 | Shopper| Quickly identify other types of products available on the site | Take advantage of a good selection of products I'd like to purchase |
+| 5 | Shopper | Easily view the total of my purchases at any time | Avoid spending too much |
+| **REGISTRATION & USER ACCOUNTS** |
+| 6 | Site User | Easily register for an account| Have a personal account and be able to view my profile |
+| 7 | Site User | Easily log in or out | Access my personal account information |
+| 8 | Site User | Easily recover my password in case I forget it | Recover access to my account |
+| 9 | Site User | Receive an email confirmation after registering | Verify that my account registration was successful |
+| 10 | Site User | Have a personalised user profile | View my personal order history and order confirmations, and save my payment information |
+| **SORTING & SEARCHING** |
+| 11 | Shopper | Sort the list of available products | Easily identify the best rated, best priced and categorically sort products |
+| 12 | Shopper | Sort a specific category of product | Find the best-priced or best-rated product in a specific category, or sort the products in that category by name |
+| 13 | Shopper | Sort multiple categories of products simultaneously | Find the best-priced or best-rated products across broad categories |
+| 14 | Shopper | Search for a product by name or description | Find a specific product I'd like to purchase |
+| 15 | Shopper | Easily see what I've searched for and the number of results | Quickly decide whether the product I want is available |
+| **PURCHASING & CHECKOUT** |
+| 16 | Shopper | Easily select the quantity of a product when purchasing it | Ensure I don't accidentally select the wrong product or quantity |
+| 17 | Shopper | View items in my bag to be purchased | Identify the total cost of my purchase and all items I will receive |
+| 18 | Shopper | Adjust the quantity of individual items in my bag| Easily make changes to my purchase before checkout |
+| 19 | Shopper | Easily enter my payment information | Check out quickly and with no hassles |
+| 20 | Shopper | Feel my personal and payment information is safe and secure | Confidently provide the needed information to make a purchase |
+| 21 | Shopper | View an order confirmation after checkout | Verify that I haven't made any mistakes |
+| 22 | Shopper | Receive an email confirmation after checking out | Keep the confirmation of what I've purchased for my records |
+| **ADMIN & STORE MANAGEMENT** |
+| 23 | Store Owner | Add a product| Add new items to my store |
+| 24 | Store Owner | Edit/update a product | Change product prices, descriptions, images and other product criteria |
+| 25 | Store Owner | Delete a product | Remove items that are no longer for sale |
 
-### How to Create a Django Project
+
+## How to Create a Django Project
 
 Step-by-Step Guide:
 
@@ -140,59 +173,15 @@ Virtual Environments: If you're working within a virtual environment (recommende
 
 Postgres or Other Database: If you're using PostgreSQL, MySQL, or another database, make sure your DATABASES settings in settings.py are configured correctly before running migrations.
 
-### Information Architecture
-
-The app is built on a **relational database structure**, where information is organised into tables that are interlinked to efficiently manage tasks and categories. At the core of the system, there are two main entities: tasks and categories. Each task is associated with a specific category, creating a relationship between the two. The tasks table stores information such as task names, descriptions, due dates, urgency and a reference to the category it belongs to. The categories table holds data about the different task categories, such as category names. These tables are linked through a foreign key, allowing tasks to be easily grouped under relevant categories. This relational structure ensures data integrity, simplifies updates, and allows users to view or modify tasks and categories without redundancy. By organising the data in this way, the app offers efficient data retrieval, updating, and management, helping users keep their information well-structured and accessible.
 
 ### Interface and Navigation Design
 
 The interface and navigation design of the app have been carefully crafted to ensure a seamless experience across both mobile and desktop devices. By incorporating a responsive design, the app adjusts to different screen sizes, providing a consistent and user-friendly experience on any device. The main navigation menu is easy to access and intuitive, offering quick access to key sections of the site while maintaining a clean and uncluttered layout. 
 
 
-### Visual Design and Aesthetics
-
-PLACEHOLDER
-
-
-## User Story
-
-| User Story ID | As a/an | I want to be able to ... | So that I can... |
-| :--- | :--- | :--- | :---|
-| **VIEWING & NAVIGATION** |
-| 1 | Shopper | View a list of products| Select something to purchase |
-| 2 | Shopper | View a specific category of products | Quickly find products I'm interested in without having to search through all products. |
-| 3 | Shopper | View individual product details | Identify the price, description, product rating, product image and available sizes. |
-| 4 | Shopper| Quickly identify other types of products available on the site | Take advantage of a good selection of products I'd like to purchase. |
-| 5 | Shopper | Easily view the total of my purchases at any time | Avoid spending too much. |
-| **REGISTRATION & USER ACCOUNTS** |
-| 6 | Site User | Easily register for an account| Have a personal account and be able to view my profile |
-| 7 | Site User | Easily log in or out | Access my personal account information |
-| 8 | Site User | Easily recover my password in case I forget it | Recover access to my account |
-| 9 | Site User | Receive an email confirmation after registering | Verify that my account registration was successful |
-| 10 | Site User | Have a personalised user profile | View my personal order history and order confirmations, and save my payment information |
-| **SORTING & SEARCHING** |
-| 11 | Shopper | Sort the list of available products | Easily identify the best rated, best priced and categorically sort products |
-| 12 | Shopper | Sort a specific category of product | Find the best-priced or best-rated product in a specific category, or sort the products in that category by name |
-| 13 | Shopper | Sort multiple categories of products simultaneously | Find the best-priced or best-rated products across broad categories |
-| 14 | Shopper | Search for a product by name or description | Find a specific product I'd like to purchase |
-| 15 | Shopper | Easily see what I've searched for and the number of results | Quickly decide whether the product I want is available |
-| **PURCHASING & CHECKOUT** |
-| 16 | Shopper | Easily select the quantity of a product when purchasing it | Ensure I don't accidentally select the wrong product or quantity |
-| 17 | Shopper | View items in my bag to be purchased | Identify the total cost of my purchase and all items I will receive |
-| 18 | Shopper | Adjust the quantity of individual items in my bag| Easily make changes to my purchase before checkout |
-| 19 | Shopper | Easily enter my payment information | Check out quickly and with no hassles |
-| 20 | Shopper | Feel my personal and payment information is safe and secure | Confidently provide the needed information to make a purchase |
-| 21 | Shopper | View an order confirmation after checkout | Verify that I haven't made any mistakes |
-| 22 | Shopper | Receive an email confirmation after checking out | Keep the confirmation of what I've purchased for my records |
-| **ADMIN & STORE MANAGEMENT** |
-| 23 | Store Owner | Add a product| Add new items to my store |
-| 24 | Store Owner | Edit/update a product | Change product prices, descriptions, images and other product criteria |
-| 25 | Store Owner | Delete a product | Remove items that are no longer for sale |
-
-
 ## Features 
 
-#### User Authentication and Authorization
+#### User Authentication and Authorisation
 - User Registration
 - User login with email confirmation
 - User logout
