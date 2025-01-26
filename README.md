@@ -7,6 +7,7 @@
 - [User Story](#user-story)
 - [How to Create a Django Project](#how-to-create-a-django-project)
 - [Features](#features)
+- [Testing](#testing)
 - [Database](#database)
 - [Technology](#technology)
 - [Deployment and Local Development](#deployment-and-local-development)
@@ -281,6 +282,10 @@ Foreign Key: A column in one table that references the primary key in another ta
 Relational databases use SQL (Structured Query Language) to query, manage, and manipulate the data. They are ideal for handling structured data with clear relationships, like in applications such as banking systems, customer management, and e-commerce platforms.
 
 Popular relational database systems include MySQL, PostgreSQL, Oracle Database, and Microsoft SQL Server.
+
+Below is my entity relationship diagram for this project. An ERD is a visual representation of how entities relate to each other in a database.
+
+![crop_circle_ERD](./assets/crop_circle_ERD.png)
 
 ## Technology
 + This website was made in its entirety using Visual Code Studio
