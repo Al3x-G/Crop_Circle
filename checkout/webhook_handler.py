@@ -30,29 +30,19 @@ class StripeWH_Handler:
         - Generates the subject and body of the email from templates.
         - Sends the email using Django's send_mail function.
         """
-        # Extract the customer's email address from the order.
         cust_email = order.email
-
-        # Render the email subject using a template,
-        # passing the order as context.
         subject = render_to_string(
             'checkout/confirmation_emails/confirmation_email_subject.txt',
-            {'order': order}
-        )
-
-        # Render the body of the email using a template,
-        # passing the order and contact email.
+            {'order': order})
         body = render_to_string(
             'checkout/confirmation_emails/confirmation_email_body.txt',
-            {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL}
-        )
+            {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
 
-        # Use Django's send_mail function to send the email
         send_mail(
-            subject,  # Subject of the email
-            body,     # Body of the email
-            settings.DEFAULT_FROM_EMAIL,  # Sender's email (in settings)
-            [cust_email]  # Recipient's email address (customer's email)
+            subject,
+            body,
+            settings.DEFAULT_FROM_EMAIL,
+            [cust_email]
         )
 
     def handle_event(self, event):
@@ -78,14 +68,9 @@ class StripeWH_Handler:
         bag = intent.metadata.bag
         save_info = intent.metadata.save_info
 
-        # Get the Charge object
-        stripe_charge = stripe.Charge.retrieve(
-            intent.latest_charge
-        )
-
-        billing_details = stripe_charge.billing_details
+        billing_details = intent.charges.data[0].billing_details
         shipping_details = intent.shipping
-        grand_total = round(stripe_charge.amount / 100, 2)
+        grand_total = round(intent.charges.data[0].amount / 100, 2)
 
         # Clean data in the shipping details
         for field, value in shipping_details.address.items():
