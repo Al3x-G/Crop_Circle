@@ -254,9 +254,20 @@ Declined payments
 
 ## Testing
 
-Lighthouse report in Developement
+#### Lighthouse report in Developement
 
-![Lighthouse Report Dev](./assets/Lighthouse%20Report%20Dev.png)
+![Lighthouse Report Dev](./assets/Lighthouse_Report_Dev.png)
+
+#### PEP8 (Python Enhancement Proposal-8) 
+
+I used Flake8 within my developement environment (during the process of creating) to improve the readability and maintainibility of Python code.
+
+For lines that were too long and could not be indented and maintain fucntionality (as far as I knew being a novice!) I included a "# noqa: E501 (Fix flake 8 line too long)" comment at the end of the line in question.
+
+I noticed that all current errors were nothing to do with my code apart from one (after I cleared all other errors such as whitespace, line to long etc).
+
+This error is explained below here -
+![PEP8_Flake8](./assets/PEP8_Flake8.png)
 
 
 ## Database
