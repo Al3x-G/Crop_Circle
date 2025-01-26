@@ -239,17 +239,24 @@ The interface and navigation design of the app have been carefully crafted to en
 #### Test card numbers for Stripe
 https://stripe.com/docs/testing?testing-method=card-numbers
 
-- ##### Successful payment
-`4242424242424242`
+Successful payment
+- `4242424242424242`
 
-- ##### Declined payments
+Declined payments
 - `4000000000000002` - card declined
 - `4000000000009995` - insufficient funds
 - `4000000000009987` - lost card
 - `4000000000009979` - stolen card
 
-- ##### 3D Secure
-`4000002500003155` - 3D Secure authentication required
+3D Secure
+- `4000002500003155` - 3D Secure authentication required
+
+
+## Testing
+
+Lighthouse report in Developement
+
+![Lighthouse Report Dev](./assets/Lighthouse%20Report%20Dev.png)
 
 
 ## Database
