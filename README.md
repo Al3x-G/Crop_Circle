@@ -349,7 +349,7 @@ Images were all license free from [Unsplash](https://unsplash.com/) and [Pexel](
 
 ### Code
 
-All code was written by Alex Gordon working alongside Code Institute for support and guidance.
+All code was written by Alex Gordon working alongside Code Institute for support, guidance and classes.
 
 ### Special mention
 
