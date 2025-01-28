@@ -13,7 +13,7 @@ class UserProfileForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         """
-        Customizes the form during initialisation:
+        Customises the form during initialisation:
         - Adds placeholders to the fields for user guidance.
         - Adds CSS classes for consistent styling.
         - Removes auto-generated labels for a cleaner appearance.
