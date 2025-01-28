@@ -35,7 +35,7 @@ DEBUG = 'DEVELOPMENT' in os.environ
 ALLOWED_HOSTS = [
     'crop-circle-app-ecab80dfedd0.herokuapp.com',
     '8000-al3xg-cropcircle-uty04ds9k0t.ws.codeinstitute-ide.net',
-    'localhost'
+    'localhost',
     ]
 
 
