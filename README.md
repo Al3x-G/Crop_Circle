@@ -270,6 +270,11 @@ I noticed that all current errors were nothing to do with my code apart from one
 This error is explained below here -
 ![PEP8_Flake8](./assets/PEP8_Flake8.png)
 
+#### HTML Validator
+
+Below is the result using the fully deployed URl at https://validator.w3.org/
+![HTML_Valid](./assets/HTML_Valid.png)
+
 
 ## Database
 
