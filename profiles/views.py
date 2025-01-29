@@ -38,19 +38,19 @@ def profile(request):
         # create a form for displaying current profile.
         form = UserProfileForm(instance=profile)
 
-        # Retrieve all orders associated with the user's profile.
-        orders = profile.orders.all()
+    # Retrieve all orders associated with the user's profile.
+    orders = profile.orders.all()
 
-        # Define the template and context to render.any
-        template = 'profiles/profile.html'
-        context = {
-            'form': form,  # The profile form to be rendered.
-            'orders': orders,  # The user's orders to be displayed.
-            'on_profile_page': True,  # Flag indicating user on their profile.
-        }
+    # Define the template and context to render.any
+    template = 'profiles/profile.html'
+    context = {
+        'form': form,  # The profile form to be rendered.
+        'orders': orders,  # The user's orders to be displayed.
+        'on_profile_page': True,  # Flag indicating user on their profile.
+    }
 
-        # Render the template with the provided context (form and orders).
-        return render(request, template, context)
+    # Render the template with the provided context (form and orders).
+    return render(request, template, context)
 
 
 def order_history(request, order_number):
